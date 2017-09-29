@@ -94,13 +94,18 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="source\BComponent.js" />
+    <Content Include="source\Layout\BContainer.js" />
+    <Content Include="source\BContent.js" />
+    <Content Include="source\Layout\BLayout.js" />
+    <Content Include="source\BObject.js" />
+    <Content Include="source\BUtility.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="source\" />
     <Folder Include="test\" />
   </ItemGroup>
   <PropertyGroup>
