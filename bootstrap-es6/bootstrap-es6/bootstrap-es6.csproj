@@ -99,6 +99,7 @@
     <Content Include="source\Layout\BContainer.js" />
     <Content Include="source\Content\BContent.js" />
     <Content Include="source\Layout\BContainerFluid.js" />
+    <Content Include="source\Layout\BGrid.js" />
     <Content Include="source\Layout\BLayout.js" />
     <Content Include="source\BObject.js" />
     <Content Include="source\Utility\BUtility.js" />
