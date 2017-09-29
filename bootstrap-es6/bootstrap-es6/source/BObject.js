@@ -42,4 +42,8 @@ class BObject {
         return html;
     }
 
+    render() {
+        this.container.innerHTML += this.toHtml();
+    }
+
 }

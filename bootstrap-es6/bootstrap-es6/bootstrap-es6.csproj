@@ -94,20 +94,21 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
-    <Content Include="source\BComponent.js" />
+    <Content Include="source\BHtml.js" />
+    <Content Include="source\Component\BComponent.js" />
     <Content Include="source\Layout\BContainer.js" />
-    <Content Include="source\BContent.js" />
+    <Content Include="source\Content\BContent.js" />
+    <Content Include="source\Layout\BContainerFluid.js" />
     <Content Include="source\Layout\BLayout.js" />
     <Content Include="source\BObject.js" />
-    <Content Include="source\BUtility.js" />
+    <Content Include="source\Utility\BUtility.js" />
+    <Content Include="test\01-BContainerTest.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="test\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>01-BContainerTest</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../source/BObject.js"></script>
+    <script src="../source/BHtml.js"></script>
+
+    <script src="../source/Layout/BLayout.js"></script>
+    <script src="../source/Layout/BContainer.js"></script>
+    <script src="../source/Layout/BContainerFluid.js"></script>
+    <script>
+        // BContainer
+        var container1 = new BContainer(document.body);
+        var html1 = new BHtml(container1);
+        html1.setHtml('<h1>This is BContainer.</h1>');
+        container1.appendChild(html1);
+        container1.render();
+
+        // BContainerFluid
+        var container2 = new BContainerFluid(document.body);
+        var html2 = new BHtml(container2);
+        html2.setHtml('<h1>This is BContainerFluid.</h1>');
+        container2.appendChild(html2);
+        container2.render();
+    </script>
+</body>
+</html>
