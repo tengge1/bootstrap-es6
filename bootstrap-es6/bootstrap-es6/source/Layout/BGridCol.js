@@ -1,6 +1,6 @@
-﻿// BGrid
+﻿// BGridCol
 
-class BGrid extends BObject {
+class BGridCol extends BObject {
 
     constructor(container) {
         super(container);
