@@ -2,9 +2,9 @@
 
 class BHtml extends BObject {
 
-    constructor(container) {
-        super(container);
-        this.html = 'This is raw html.';
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'This is raw html.';
     }
 
     setHtml(html) {

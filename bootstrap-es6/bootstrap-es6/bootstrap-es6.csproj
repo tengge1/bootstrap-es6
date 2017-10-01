@@ -105,6 +105,8 @@
     <Content Include="source\Layout\BLayout.js" />
     <Content Include="source\BObject.js" />
     <Content Include="source\Utility\BUtility.js" />
+    <Content Include="test\04-BGridTest.html" />
+    <Content Include="test\03-BObjectConfigTest.html" />
     <Content Include="test\02-BContainerFluidTest.html" />
     <Content Include="test\01-BContainerTest.html" />
     <Content Include="Web.config" />

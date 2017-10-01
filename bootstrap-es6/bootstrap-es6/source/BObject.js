@@ -2,13 +2,9 @@
 
 class BObject {
 
-    constructor(container) {
-        if (!container instanceof HTMLElement) {
-            throw Error('BObject: Container is not instance of HTMLElement.');
-        }
-        this.container = container;
-        this.parent = this.container;
-        this.children = [];
+    constructor(config) {
+        this.config = config || {};
+        this.children = this.config.children || [];
         this.prefixHtml = '';
         this.suffixHtml = '';
     }
@@ -42,8 +38,11 @@ class BObject {
         return html;
     }
 
-    render() {
-        this.container.innerHTML += this.toHtml();
+    render(container) {
+        if (!container instanceof HTMLElement) {
+            throw Error('BObject: Container is not instance of HTMLElement.');
+        }
+        container.innerHTML += this.toHtml();
     }
 
 }

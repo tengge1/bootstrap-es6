@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>01-BContainerTest</title>
+    <title>03-BObjectConfigTest</title>
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <link href="../css/bootstrap-theme.css" rel="stylesheet" />
 </head>
@@ -19,12 +19,13 @@
     <script src="../source/Layout/BContainer.js"></script>
     <script src="../source/Layout/BContainerFluid.js"></script>
     <script>
-        var container = new BContainer();
-
-        var html = new BHtml();
-        html.setHtml('<h1>This is BContainer.</h1>');
-        container.appendChild(html);
-
+        var container = new BContainer({
+            children: [
+                new BHtml({
+                    html: '<h1>This is BContainer.</h1>'
+                })
+            ]
+        });
         container.render(document.body);
     </script>
 </body>

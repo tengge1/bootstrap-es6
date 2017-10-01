@@ -2,8 +2,8 @@
 
 class BContent extends BObject {
 
-    constructor(container) {
-        this.container = container;
+    constructor(config) {
+        super(config);
     }
 
 }

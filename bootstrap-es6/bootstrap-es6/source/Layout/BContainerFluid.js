@@ -2,8 +2,8 @@
 
 class BContainerFluid extends BLayout {
 
-    constructor(container) {
-        super(container);
+    constructor(config) {
+        super(config);
         this.prefixHtml = '<div class="container-fluid">';
         this.suffixHtml = '</div>';
     }

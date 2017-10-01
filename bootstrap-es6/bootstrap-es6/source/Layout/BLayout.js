@@ -2,8 +2,8 @@
 
 class BLayout extends BObject {
 
-    constructor(container) {
-        super(container);
+    constructor(config) {
+        super(config);
     }
 
 }

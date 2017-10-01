@@ -19,11 +19,13 @@
     <script src="../source/Layout/BContainer.js"></script>
     <script src="../source/Layout/BContainerFluid.js"></script>
     <script>
-        var container = new BContainerFluid(document.body);
-        var html = new BHtml(container);
+        var container = new BContainerFluid();
+
+        var html = new BHtml();
         html.setHtml('<h1>This is BContainerFluid.</h1>');
         container.appendChild(html);
-        container.render();
+
+        container.render(document.body);
     </script>
 </body>
 </html>
