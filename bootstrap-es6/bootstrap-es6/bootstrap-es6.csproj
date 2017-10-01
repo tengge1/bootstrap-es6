@@ -99,6 +99,8 @@
     <Content Include="source\Component\BComponent.js" />
     <Content Include="source\Content\BHeadingType.js" />
     <Content Include="source\Content\BHeading.js" />
+    <Content Include="source\Content\BList.js" />
+    <Content Include="source\Content\BListItem.js" />
     <Content Include="source\Layout\BContainer.js" />
     <Content Include="source\Layout\BContainerFluid.js" />
     <Content Include="source\Layout\BGridCol.js" />
@@ -108,6 +110,7 @@
     <Content Include="source\Layout\BMediaImageAlign.js" />
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
+    <Content Include="test\10-BListTest.html" />
     <Content Include="test\09-BHeadingTest.html" />
     <Content Include="test\08-BMediaListTest.html" />
     <Content Include="test\07-BMediaTest.html" />
