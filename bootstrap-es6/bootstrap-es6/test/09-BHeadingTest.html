@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>09-BHeadingTest</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../source/BObject.js"></script>
+    <script src="../source/BHtml.js"></script>
+
+    <script src="../source/Layout/BContainer.js"></script>
+    <script src="../source/Layout/BContainerFluid.js"></script>
+    <script src="../source/Layout/BGridColType.js"></script>
+    <script src="../source/Layout/BGridCol.js"></script>
+    <script src="../source/Layout/BGridRow.js"></script>
+    <script src="../source/Layout/BMediaImageAlign.js"></script>
+    <script src="../source/Layout/BMedia.js"></script>
+
+    <script src="../source/Content/BHeadingType.js"></script>
+    <script src="../source/Content/BHeading.js"></script>
+    <script>
+        var container = new BContainer({
+            children: [
+                new BHeading({
+                    title: 'This is default BHeading.'
+                }),
+                new BHeading({
+                    title: 'This is BHeading h3.',
+                    type: BHeadingType.h3
+                }),
+                new BHeading({
+                    title: 'This is BHeading with subtitle.',
+                    subtitle: 'This is subtitle.'
+                })
+            ]
+        });
+
+        container.render(document.body);
+    </script>
+</body>
+</html>
