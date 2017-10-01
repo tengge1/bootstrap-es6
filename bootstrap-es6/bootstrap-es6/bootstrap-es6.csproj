@@ -104,6 +104,7 @@
     <Content Include="source\Layout\BGridRow.js" />
     <Content Include="source\Layout\BLayout.js" />
     <Content Include="source\BObject.js" />
+    <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
     <Content Include="test\06-BGridPullPushTest.html" />
     <Content Include="test\05-BGridOffsetTest.html" />
