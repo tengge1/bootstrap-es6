@@ -1,6 +1,6 @@
 ﻿// BContainerFluid
 
-class BContainerFluid extends BLayout {
+class BContainerFluid extends BObject {
 
     constructor(config) {
         super(config);

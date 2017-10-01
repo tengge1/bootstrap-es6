@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="image\timg.gif" />
     <Content Include="packages.config" />
     <Content Include="css\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap-theme.min.css.map" />
@@ -96,16 +97,19 @@
     <Content Include="js\npm.js" />
     <Content Include="source\BHtml.js" />
     <Content Include="source\Component\BComponent.js" />
+    <Content Include="source\Content\BHeading.js" />
     <Content Include="source\Layout\BContainer.js" />
     <Content Include="source\Content\BContent.js" />
     <Content Include="source\Layout\BContainerFluid.js" />
     <Content Include="source\Layout\BGridCol.js" />
     <Content Include="source\Layout\BGridColType.js" />
     <Content Include="source\Layout\BGridRow.js" />
-    <Content Include="source\Layout\BLayout.js" />
     <Content Include="source\BObject.js" />
+    <Content Include="source\Layout\BMediaImageAlign.js" />
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
+    <Content Include="test\08-BMediaListTest.html" />
+    <Content Include="test\07-BMediaTest.html" />
     <Content Include="test\06-BGridPullPushTest.html" />
     <Content Include="test\05-BGridOffsetTest.html" />
     <Content Include="test\04-BGridTest.html" />

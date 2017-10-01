@@ -1,6 +1,6 @@
 ﻿// BContainer
 
-class BContainer extends BLayout {
+class BContainer extends BObject {
 
     constructor(config) {
         super(config);

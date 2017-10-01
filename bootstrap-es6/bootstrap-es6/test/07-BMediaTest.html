@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>07-BMediaTest</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../source/BObject.js"></script>
+    <script src="../source/BHtml.js"></script>
+
+    <script src="../source/Layout/BContainer.js"></script>
+    <script src="../source/Layout/BContainerFluid.js"></script>
+    <script src="../source/Layout/BGridColType.js"></script>
+    <script src="../source/Layout/BGridCol.js"></script>
+    <script src="../source/Layout/BGridRow.js"></script>
+    <script src="../source/Layout/BMediaImageAlign.js"></script>
+    <script src="../source/Layout/BMedia.js"></script>
+    <script>
+        var html = `<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.</p> <p>Donec lacinia congue felis in faucibus.Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>`;
+
+        var container = new BContainer();
+
+        var media1 = new BMedia({
+            img: '../image/timg.gif',
+            imgAlign: BMediaImageAlign.top,
+            imgAlt: 'BMedia 1',
+            href: 'https://github.com/tengge1/bootstrap-es6',
+            title: 'BMedia with an Image at the Top',
+            children: [
+                new BHtml({
+                    html: html
+                })
+            ]
+        });
+
+        var media2 = new BMedia({
+            img: '../image/timg.gif',
+            imgAlign: BMediaImageAlign.middle,
+            imgAlt: 'BMedia 2',
+            href: 'https://github.com/tengge1/bootstrap-es6',
+            title: 'BMedia with an Image at the Middle',
+            children: [
+                new BHtml({
+                    html: html
+                })
+            ]
+        });
+
+        var media3 = new BMedia({
+            img: '../image/timg.gif',
+            imgAlign: BMediaImageAlign.bottom,
+            imgAlt: 'BMedia 3',
+            href: 'https://github.com/tengge1/bootstrap-es6',
+            title: 'BMedia with an Image at the Bottom',
+            children: [
+                new BHtml({
+                    html: html
+                })
+            ]
+        });
+
+        container.appendChild(media1);
+        container.appendChild(media2);
+        container.appendChild(media3);
+
+        container.render(document.body);
+    </script>
+</body>
+</html>
