@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>13-BBadgeTest</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../source/BObject.js"></script>
+    <script src="../source/BHtml.js"></script>
+
+    <script src="../source/Layout/BContainer.js"></script>
+    <script src="../source/Layout/BContainerFluid.js"></script>
+    <script src="../source/Layout/BGridColType.js"></script>
+    <script src="../source/Layout/BGridCol.js"></script>
+    <script src="../source/Layout/BGridRow.js"></script>
+    <script src="../source/Layout/BMediaImageAlign.js"></script>
+    <script src="../source/Layout/BMedia.js"></script>
+
+    <script src="../source/Content/BHeadingType.js"></script>
+    <script src="../source/Content/BHeading.js"></script>
+    <script src="../source/Content/BListItem.js"></script>
+    <script src="../source/Content/BList.js"></script>
+    <script src="../source/Content/BTableCell.js"></script>
+    <script src="../source/Content/BTableRow.js"></script>
+    <script src="../source/Content/BTable.js"></script>
+
+    <script src="../source/Component/BAlertType.js"></script>
+    <script src="../source/Component/BAlert.js"></script>
+    <script src="../source/Component/BBadgeType.js"></script>
+    <script src="../source/Component/BBadge.js"></script>
+    <script>
+        var container = new BContainer({
+            children: [
+                new BBadge({
+                    html: 'default',
+                    type: BBadgeType.default
+                }),
+                new BBadge({
+                    html: 'primary',
+                    type: BBadgeType.primary
+                }),
+                new BBadge({
+                    html: 'success',
+                    type: BBadgeType.success
+                }),
+                new BBadge({
+                    html: 'info',
+                    type: BBadgeType.info
+                }),
+                new BBadge({
+                    html: 'warning',
+                    type: BBadgeType.warning
+                }),
+                new BBadge({
+                    html: 'danger',
+                    type: BBadgeType.danger
+                }),
+            ]
+        });
+
+        container.render(document.body);
+    </script>
+</body>
+</html>
