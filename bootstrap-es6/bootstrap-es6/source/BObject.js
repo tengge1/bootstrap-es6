@@ -1,9 +1,11 @@
-﻿// BObject
+﻿// BObject.js
 
 class BObject {
 
     constructor(config) {
         this.config = config || {};
+        this.alias = 'bobject';
+
         this.children = this.config.children || [];
         this.prefixHtml = '';
         this.suffixHtml = '';
