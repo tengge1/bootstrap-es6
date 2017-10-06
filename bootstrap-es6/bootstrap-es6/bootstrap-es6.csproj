@@ -103,6 +103,7 @@
     <Content Include="source\Component\BBreadcrumb.js" />
     <Content Include="source\Component\BBreadcrumbItem.js" />
     <Content Include="source\Component\BButton.js" />
+    <Content Include="source\Component\BButtonGroup.js" />
     <Content Include="source\Component\BButtonType.js" />
     <Content Include="source\Content\BHeadingType.js" />
     <Content Include="source\Content\BHeading.js" />
@@ -122,6 +123,7 @@
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
     <Content Include="test\12-BImageTest.html" />
+    <Content Include="test\17-BButtonGroupTest.html" />
     <Content Include="test\16-BButtonTest.html" />
     <Content Include="test\15-BBreadcrumbItemTest.html" />
     <Content Include="test\14-BBadgeTest.html" />
