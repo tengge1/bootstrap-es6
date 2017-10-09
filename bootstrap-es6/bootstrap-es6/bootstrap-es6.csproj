@@ -112,6 +112,7 @@
     <Content Include="source\Layout\BMediaImageAlign.js" />
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
+    <Content Include="test\02-BHtmlTest.html" />
     <Content Include="test\01-BObjectTest.html" />
     <Content Include="test\12-BImageTest.html" />
     <Content Include="test\17-BButtonGroupTest.html" />

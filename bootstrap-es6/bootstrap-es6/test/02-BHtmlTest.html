@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>02-BHtmlTest</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container" style="width: 100px; height: 200px;"></div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="../source/BObject.js"></script>
+    <script src="../source/BHtml.js"></script>
+
+    <script>
+        var html = new BHtml({
+            container: document.getElementById('container'),
+            html: '<div>This is the old html.</div>'
+        });
+        html.setHtml('This is new html.');
+        console.log(html.getHtml());
+    </script>
+</body>
+</html>
