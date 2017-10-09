@@ -71,6 +71,8 @@
     <Content Include="image\timg.gif" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\popper.js" />
+    <Content Include="js\popper.min.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -110,6 +112,7 @@
     <Content Include="source\Layout\BMediaImageAlign.js" />
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
+    <Content Include="test\01-BObjectTest.html" />
     <Content Include="test\12-BImageTest.html" />
     <Content Include="test\17-BButtonGroupTest.html" />
     <Content Include="test\16-BButtonTest.html" />
