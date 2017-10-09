@@ -8,7 +8,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="container" style="width: 100px; height: 200px;"></div>
+    <div id="container" style="width: 500px; height: 100px; background-color: #ccc;"></div>
 
     <script src="../js/jquery.js"></script>
     <script src="../js/popper.js"></script>
@@ -20,10 +20,10 @@
     <script>
         var html = new BHtml({
             container: document.getElementById('container'),
-            html: '<div>This is the old html.</div>'
+            html: '<div style="color:red;">This is the old html.</div>'
         });
-        html.setHtml('This is new html.');
-        console.log(html.getHtml());
+        html.setHtml('<div style="color:green;">This is the new html.</div>');
+        html.render();
     </script>
 </body>
 </html>

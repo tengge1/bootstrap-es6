@@ -8,4 +8,8 @@ class BContainer extends BObject {
         this.suffixHtml = '</div>';
     }
 
+    render() {
+
+    }
+
 }

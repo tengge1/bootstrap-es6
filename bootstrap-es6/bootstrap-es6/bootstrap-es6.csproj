@@ -86,6 +86,7 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="source\BHtml.js" />
+    <Content Include="source\BXType.js" />
     <Content Include="source\Component\BAlert.js" />
     <Content Include="source\Component\BAlertType.js" />
     <Content Include="source\Component\BBadge.js" />
