@@ -68,6 +68,15 @@
   <ItemGroup>
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="dist\css\bootstrap.css" />
+    <Content Include="dist\css\bootstrap.min.css" />
+    <Content Include="dist\js\bootstrap-es6.js" />
+    <Content Include="dist\js\bootstrap.js" />
+    <Content Include="dist\js\bootstrap.min.js" />
+    <Content Include="dist\js\jquery.js" />
+    <Content Include="dist\js\jquery.min.js" />
+    <Content Include="dist\js\popper.js" />
+    <Content Include="dist\js\popper.min.js" />
     <Content Include="image\timg.gif" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />

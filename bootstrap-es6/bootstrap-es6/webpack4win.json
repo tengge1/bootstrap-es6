@@ -1,28 +1,45 @@
 ﻿{
-  "css": {
-    "source": [
-      "source/css/mycss1.css",
-      "source/css/mycss2.css",
-      "source/css/mycss3.css"
-    ],
-    "dest": "dist/css",
-    "fileName": "mycss"
-  },
-
   "js": {
     "source": [
-      "source/js/Animal.js",
-      "source/js/Cat.js",
-      "source/js/Dog.js"
+      "source/BObject.js",
+      "source/BHtml.js"
     ],
     "dest": "dist/js",
-    "fileName": "myjs"
+    "fileName": "bootstrap-es6"
   },
 
   "asset": [
     {
-      "source": "source/assets/my.jpg",
-      "dest": "dist/image/my.jpg"
+      "source": "css/bootstrap.css",
+      "dest": "dist/css/bootstrap.css"
+    },
+    {
+      "source": "css/bootstrap.min.css",
+      "dest": "dist/css/bootstrap.min.css"
+    },
+    {
+      "source": "js/jquery.js",
+      "dest": "dist/js/jquery.js"
+    },
+    {
+      "source": "js/jquery.min.js",
+      "dest": "dist/js/jquery.min.js"
+    },
+    {
+      "source": "js/popper.js",
+      "dest": "dist/js/popper.js"
+    },
+    {
+      "source": "js/popper.min.js",
+      "dest": "dist/js/popper.min.js"
+    },
+    {
+      "source": "js/bootstrap.js",
+      "dest": "dist/js/bootstrap.js"
+    },
+    {
+      "source": "js/bootstrap.min.js",
+      "dest": "dist/js/bootstrap.min.js"
     }
   ]
 }
