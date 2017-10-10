@@ -1,0 +1,28 @@
+﻿{
+  "css": {
+    "source": [
+      "source/css/mycss1.css",
+      "source/css/mycss2.css",
+      "source/css/mycss3.css"
+    ],
+    "dest": "dist/css",
+    "fileName": "mycss"
+  },
+
+  "js": {
+    "source": [
+      "source/js/Animal.js",
+      "source/js/Cat.js",
+      "source/js/Dog.js"
+    ],
+    "dest": "dist/js",
+    "fileName": "myjs"
+  },
+
+  "asset": [
+    {
+      "source": "source/assets/my.jpg",
+      "dest": "dist/image/my.jpg"
+    }
+  ]
+}
