@@ -9,8 +9,20 @@ class BObject {
         this.children = [];
     }
 
-    render() {
+    appendChild(obj) {
 
+    }
+
+    removeChild(obj) {
+
+    }
+
+    render() {
+        this.children.forEach(n => {
+            if (typeof (n.render) == 'function') {
+                n.render();
+            }
+        });
     }
 
 }
