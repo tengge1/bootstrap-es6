@@ -4,14 +4,16 @@ class BXType {
 
     constructor() {
         this.xtypes = {
-
+            'object': BObject,
+            'nestedobject': BNestedObject
         };
     }
 
-    get(obj) {
-        if (obj.hasOwnProperty('xtype')) {
-
+    get(config) {
+        if (!config.hasOwnProperty('xtype')) {
+            throw Error('BXType: config has no attribute xtype.');
         }
+        return new this.xtypes[config.xtype](config);
     }
 
 }

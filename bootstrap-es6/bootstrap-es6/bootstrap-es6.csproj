@@ -89,12 +89,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="webpack4win.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="source\BHtml.js" />
+    <Content Include="source\BNestedObject.js" />
     <Content Include="source\BXType.js" />
     <Content Include="source\Component\BAlert.js" />
     <Content Include="source\Component\BAlertType.js" />

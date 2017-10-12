@@ -2,6 +2,7 @@
   "js": {
     "source": [
       "source/BObject.js",
+      "source/BNestedObject.js",
       "source/BHtml.js"
     ],
     "dest": "dist/js",
