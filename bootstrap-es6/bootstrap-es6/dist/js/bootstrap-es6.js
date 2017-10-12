@@ -1,82 +1,82 @@
-// BObject.js
+/**
+ * bootstrap-es6
+ * https://github.com/tengge1/bootstrap-es6.git
+ */
 
-class BObject {
 
-    constructor(config) {
-        this.config = config || {};
-        this.container = this.config.container || null;
-        this.alias = 'object';
+// XType.js
+
+class XType {
+
+    static get(config) {
+        if (config == null || config.xtype == null) {
+            throw 'XType: config or config.xtype is undefined.';
+        }
+        var cls = XType.xtypes[config.xtype];
+        if (cls == null) {
+            throw `XType: xtype '${config.xtype}' is undefined.`;
+        }
+        return new cls(config);
     }
 
-    render() {
+    static add(name, cls) {
+        if (XType.xtypes[name] == null) {
+            XType.xtypes[name] = cls;
+        }
+    }
 
+    static remove(name) {
+        delete XType.xtypes[name];
     }
 
 }
 
-// BNestedObject.js
+XType.xtypes = {};
 
-class BNestedObject extends BObject {
+// XCache.js
 
-    constructor(config) {
-        super(config);
-        this.alias = 'nestedobject';
-        this.children = [];
+class XCache {
+
+    static get(name) {
+        if (name == null) {
+            return null;
+        }
+        var obj = XCache.components[name];
+        return obj == undefined ? null : obj;
     }
 
-    appendChild(obj) {
-        if (!obj instanceof BNestedObject) {
-            throw Error('BNestedObject: obj is not an instance of BNestedObject.');
+    static add(name, obj) {
+        if (name == null) {
+            return;
         }
-        this.children.push(obj);
+        if (XCache.components[name] == null) {
+            XCache.components[name] = obj;
+        }
     }
 
-    removeChild(obj) {
-        if (!obj instanceof BNestedObject) {
-            throw Error('BNestedObject: obj is not an instance of BNestedObject.');
-        }
-        for (var i = 0; i < this.children.length; i++) {
-            var child = this.children[i];
-            if (child == obj) {
-                this.children.splice(i);
-                i--;
+    static remove(name) {
+        delete XCache.components[name];
+    }
+
+}
+
+XCache.components = {};
+
+// XEvent.js
+
+class XEvent {
+
+    constructor(target, listener, scope) {
+        Object.keys(listener).forEach((n, i) => {
+            if (n.startsWith('on')) {
+                n = n.substr(2, n.length - 2);
             }
-        }
-    }
-
-    render() {
-        this.children.forEach(n => {
-            if (typeof (n.render) == 'function') {
-                n.render();
-            }
+            target.addEventListener(n, (e) => {
+                if (typeof (listener[n]) == 'function') {
+                    listener[n].call(scope == null ? n : scope, e);
+                }
+            }, false);
         });
-    }
-}
-
-// BHtml
-
-class BHtml extends BObject {
-
-    constructor(config) {
-        super(config);
-        if (this.container == document.body) {
-            throw Error('BHtml: container cannot be document.body.');
-        }
-
-        this.html = this.config.html || 'This is raw html.';
-        this.alias = 'html';
-    }
-
-    setHtml(html) {
-        this.html = html;
-    }
-
-    getHtml() {
-        return this.html;
-    }
-
-    render() {
-        this.container.innerHTML += this.html;
     }
 
 }

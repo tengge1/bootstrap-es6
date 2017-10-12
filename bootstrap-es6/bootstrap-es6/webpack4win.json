@@ -1,9 +1,10 @@
 ﻿{
   "js": {
     "source": [
-      "source/BObject.js",
-      "source/BNestedObject.js",
-      "source/BHtml.js"
+      "source/XBootstrap.js",
+      "source/XType.js",
+      "source/XCache.js",
+      "source/XEvent.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
