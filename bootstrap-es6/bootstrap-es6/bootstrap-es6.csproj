@@ -94,6 +94,7 @@
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test2\05-XHtmlTest.html" />
     <Content Include="test2\04-XObjectTest.html" />
     <Content Include="test2\03-XEventTest.html" />
     <Content Include="test2\02-XCacheTest.html" />
@@ -104,8 +105,7 @@
     <Content Include="index.html" />
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
-    <Content Include="source\BHtml.js" />
-    <Content Include="source\BNestedObject.js" />
+    <Content Include="source\XHtml.js" />
     <Content Include="source\Component\BAlert.js" />
     <Content Include="source\Component\BAlertType.js" />
     <Content Include="source\Component\BBadge.js" />
@@ -132,8 +132,6 @@
     <Content Include="source\Layout\BMediaImageAlign.js" />
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />
-    <Content Include="test\02-BHtmlTest.html" />
-    <Content Include="test\01-BObjectTest.html" />
     <Content Include="test\12-BImageTest.html" />
     <Content Include="test\17-BButtonGroupTest.html" />
     <Content Include="test\16-BButtonTest.html" />
