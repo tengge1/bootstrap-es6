@@ -106,55 +106,18 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="source\XHtml.js" />
-    <Content Include="source\Component\BAlert.js" />
-    <Content Include="source\Component\BAlertType.js" />
-    <Content Include="source\Component\BBadge.js" />
-    <Content Include="source\Component\BBadgeType.js" />
-    <Content Include="source\Component\BBreadcrumb.js" />
-    <Content Include="source\Component\BBreadcrumbItem.js" />
-    <Content Include="source\Component\BButton.js" />
-    <Content Include="source\Component\BButtonGroup.js" />
-    <Content Include="source\Component\BButtonType.js" />
-    <Content Include="source\Content\BHeadingType.js" />
-    <Content Include="source\Content\BHeading.js" />
-    <Content Include="source\Content\BImage.js" />
-    <Content Include="source\Content\BList.js" />
-    <Content Include="source\Content\BListItem.js" />
-    <Content Include="source\Content\BTable.js" />
-    <Content Include="source\Content\BTableCell.js" />
-    <Content Include="source\Content\BTableRow.js" />
-    <Content Include="source\Layout\BContainer.js" />
-    <Content Include="source\Layout\BContainerFluid.js" />
-    <Content Include="source\Layout\BGridCol.js" />
-    <Content Include="source\Layout\BGridColType.js" />
-    <Content Include="source\Layout\BGridRow.js" />
     <Content Include="source\XObject.js" />
-    <Content Include="source\Layout\BMediaImageAlign.js" />
-    <Content Include="source\Layout\BMedia.js" />
-    <Content Include="source\Utility\BUtility.js" />
-    <Content Include="test\12-BImageTest.html" />
-    <Content Include="test\17-BButtonGroupTest.html" />
-    <Content Include="test\16-BButtonTest.html" />
-    <Content Include="test\15-BBreadcrumbItemTest.html" />
-    <Content Include="test\14-BBadgeTest.html" />
-    <Content Include="test\13-BAlertTest.html" />
-    <Content Include="test\11-BTableTest.html" />
-    <Content Include="test\10-BListTest.html" />
-    <Content Include="test\09-BHeadingTest.html" />
-    <Content Include="test\08-BMediaListTest.html" />
-    <Content Include="test\07-BMediaTest.html" />
-    <Content Include="test\06-BGridPullPushTest.html" />
-    <Content Include="test\05-BGridOffsetTest.html" />
-    <Content Include="test\04-BGridTest.html" />
-    <Content Include="test\03-BObjectConfigTest.html" />
-    <Content Include="test\02-BContainerFluidTest.html" />
-    <Content Include="test\01-BContainerTest.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="source\Component\" />
+    <Folder Include="source\Content\" />
+    <Folder Include="source\Layout\" />
+    <Folder Include="source\Utility\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
