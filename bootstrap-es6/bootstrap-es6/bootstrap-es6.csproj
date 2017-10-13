@@ -94,11 +94,11 @@
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
-    <Content Include="test2\05-XHtmlTest.html" />
-    <Content Include="test2\04-XObjectTest.html" />
-    <Content Include="test2\03-XEventTest.html" />
-    <Content Include="test2\02-XCacheTest.html" />
-    <Content Include="test2\01-XTypeTest.html" />
+    <Content Include="test\05-XHtmlTest.html" />
+    <Content Include="test\04-XObjectTest.html" />
+    <Content Include="test\03-XEventTest.html" />
+    <Content Include="test\02-XCacheTest.html" />
+    <Content Include="test\01-XTypeTest.html" />
     <Content Include="webpack4win.json" />
   </ItemGroup>
   <ItemGroup>
