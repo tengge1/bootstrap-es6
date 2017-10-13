@@ -89,10 +89,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="source\X.js" />
     <Content Include="source\XBootstrap.js" />
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test2\04-XObjectTest.html" />
     <Content Include="test2\03-XEventTest.html" />
     <Content Include="test2\02-XCacheTest.html" />
     <Content Include="test2\01-XTypeTest.html" />
@@ -126,7 +128,7 @@
     <Content Include="source\Layout\BGridCol.js" />
     <Content Include="source\Layout\BGridColType.js" />
     <Content Include="source\Layout\BGridRow.js" />
-    <Content Include="source\BObject.js" />
+    <Content Include="source\XObject.js" />
     <Content Include="source\Layout\BMediaImageAlign.js" />
     <Content Include="source\Layout\BMedia.js" />
     <Content Include="source\Utility\BUtility.js" />

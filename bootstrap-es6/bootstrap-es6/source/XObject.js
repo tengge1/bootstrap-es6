@@ -1,11 +1,10 @@
-﻿// BObject.js
+﻿// XObject.js
 
-class BObject {
+class XObject {
 
     constructor(config) {
         this.config = config || {};
         this.container = this.config.container || null;
-        this.alias = 'object';
     }
 
     render() {
@@ -13,3 +12,4 @@ class BObject {
     }
 
 }
+XType.add('object', XObject);

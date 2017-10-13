@@ -4,7 +4,9 @@
       "source/XBootstrap.js",
       "source/XType.js",
       "source/XCache.js",
-      "source/XEvent.js"
+      "source/XEvent.js",
+      "source/X.js",
+      "source/XObject.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

@@ -17,8 +17,22 @@
         var btn = document.getElementById('btnTest');
         var event = new XEvent(btn, {
             onclick: function () {
-                alert(`You click button '${this.innerHTML}'.`);
+                alert(`You click button '${this.target.innerHTML}'.`);
             }
+        });
+
+        var fun1 = function () {
+            alert('This is fun1.');
+        };
+        event.add('onclick', fun1);
+        event.remove('click', fun1);
+        event.add('mouseover', function () {
+            this.target.style.color = 'white';
+            this.target.style.backgroundColor = 'green';
+        });
+        event.add('mouseout', function () {
+            this.target.style.color = 'white';
+            this.target.style.backgroundColor = 'blue';
         });
     </script>
 </body>
