@@ -9,7 +9,8 @@
       "source/XObject.js",
       "source/XHtml.js",
 
-      "source/Layout/XContainer.js"
+      "source/Layout/XContainer.js",
+      "source/Layout/XContainerFluid.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

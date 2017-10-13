@@ -90,11 +90,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="source\Layout\XContainer.js" />
+    <Content Include="source\Layout\XContainerFluid.js" />
     <Content Include="source\X.js" />
     <Content Include="source\XBootstrap.js" />
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\07-XContainerFluidTest.html" />
     <Content Include="test\06-XContainerTest.html" />
     <Content Include="test\05-XHtmlTest.html" />
     <Content Include="test\04-XObjectTest.html" />
