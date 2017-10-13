@@ -12,4 +12,5 @@ class XObject {
     }
 
 }
+
 XType.add('object', XObject);

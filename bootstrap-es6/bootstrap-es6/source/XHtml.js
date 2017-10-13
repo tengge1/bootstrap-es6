@@ -22,4 +22,5 @@ class XHtml extends XObject {
     }
 
 }
+
 XType.add('html', XHtml);

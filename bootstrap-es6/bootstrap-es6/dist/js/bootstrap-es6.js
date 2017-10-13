@@ -158,11 +158,17 @@ class XEvent {
 
 class X {
 
-    static create(config) {
-        if (config == null || config.xtype == null) {
-            throw 'X: config or config.xtype is undefined';
+    static create(obj) {
+        if (obj == null) {
+            throw 'X: obj is undefined.';
         }
-        return XType.get(config);
+        if (obj instanceof XObject) {
+            return obj;
+        }
+        if (obj.xtype == null) {
+            throw 'X: obj.xtype is undefined';
+        }
+        return XType.get(obj);
     }
 
     static get(name) {
@@ -185,6 +191,7 @@ class XObject {
     }
 
 }
+
 XType.add('object', XObject);
 
 // XHtml
@@ -211,5 +218,42 @@ class XHtml extends XObject {
     }
 
 }
+
 XType.add('html', XHtml);
+
+// XContainer.js
+
+class XContainer extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.container = this.config.container || document.body;
+        this.children = this.config.children || [];
+
+        this.el = {};
+        this.hasRendered = false;
+    }
+
+    render() {
+        if (this.hasRendered) {
+            return;
+        }
+        this.el.container = document.createElement('div');
+        this.el.container.className = 'container';
+        this.container.appendChild(this.el.container);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.container;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+
+        this.hasRendered = true;
+    }
+
+}
+
+XType.add('container', XContainer);
 

@@ -89,11 +89,13 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="source\Layout\XContainer.js" />
     <Content Include="source\X.js" />
     <Content Include="source\XBootstrap.js" />
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\06-XContainerTest.html" />
     <Content Include="test\05-XHtmlTest.html" />
     <Content Include="test\04-XObjectTest.html" />
     <Content Include="test\03-XEventTest.html" />
@@ -115,7 +117,6 @@
   <ItemGroup>
     <Folder Include="source\Component\" />
     <Folder Include="source\Content\" />
-    <Folder Include="source\Layout\" />
     <Folder Include="source\Utility\" />
   </ItemGroup>
   <PropertyGroup>
