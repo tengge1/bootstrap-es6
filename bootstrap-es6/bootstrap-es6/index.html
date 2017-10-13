@@ -9,22 +9,19 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-
-    <script src="source/BObject.js"></script>
-    <script src="source/BHtml.js"></script>
-
-    <script src="source/Layout/BContainer.js"></script>
-    <script src="source/Layout/BContainerFluid.js"></script>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
     <script>
-        var container = new BContainer();
-
-        var html = new BHtml();
-        html.setHtml('<h1>Hello,world.</h1>');
-        container.appendChild(html);
-
-        container.render(document.body);
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'html',
+                html: 'Hello, world!'
+            }]
+        });
+        container.render();
     </script>
 </body>
 </html>
