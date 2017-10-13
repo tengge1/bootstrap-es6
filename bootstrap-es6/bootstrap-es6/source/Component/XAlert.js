@@ -1,9 +1,10 @@
-﻿// XContainer.js
+﻿// XAlert.js
 
-class XContainer extends XObject {
+class XAlert extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || 'alert-primary';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -14,13 +15,13 @@ class XContainer extends XObject {
         if (this.hasRendered) {
             return;
         }
-        this.el.container = document.createElement('div');
-        this.el.container.className = 'container';
-        this.container.appendChild(this.el.container);
+        this.el.alert = document.createElement('div');
+        this.el.alert.className = 'alert ' + this.cls;
+        this.container.appendChild(this.el.alert);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.container;
+            obj.container = this.el.alert;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }
@@ -31,4 +32,4 @@ class XContainer extends XObject {
 
 }
 
-XType.add('container', XContainer);
+XType.add('alert', XAlert);

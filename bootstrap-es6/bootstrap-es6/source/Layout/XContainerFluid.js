@@ -4,7 +4,6 @@ class XContainerFluid extends XObject {
 
     constructor(config) {
         super(config);
-        this.container = this.config.container || document.body;
         this.children = this.config.children || [];
 
         this.el = {};

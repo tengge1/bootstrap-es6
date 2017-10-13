@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>08-XAlertTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainerFluid({
+            container: document.body,
+            children: [{
+                xtype: 'alert',
+                cls: 'alert-primary',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a primary alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-secondary',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a secondary alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-success',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a success alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-danger',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a danger alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-warning',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a warning alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-info',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a info alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-light',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a light alert.'
+                }]
+            }, {
+                xtype: 'alert',
+                cls: 'alert-dark',
+                children: [{
+                    xtype: 'html',
+                    html: 'This is a dark alert.'
+                }]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

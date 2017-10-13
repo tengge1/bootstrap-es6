@@ -4,9 +4,6 @@ class XHtml extends XObject {
 
     constructor(config) {
         super(config);
-        if (this.container == document.body) {
-            throw Error('XHtml: container cannot be document.body.');
-        }
         this.html = this.config.html || 'This is XHtml.';
 
         this.el = {};
@@ -16,6 +13,9 @@ class XHtml extends XObject {
     render() {
         if (this.hasRendered) {
             return;
+        }
+        if (this.container == document.body) {
+            throw 'XHtml: container cannot be document.body.';
         }
         this.container.innerHTML = this.html;
         this.hasRendered = true;

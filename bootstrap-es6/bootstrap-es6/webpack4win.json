@@ -10,7 +10,9 @@
       "source/XHtml.js",
 
       "source/Layout/XContainer.js",
-      "source/Layout/XContainerFluid.js"
+      "source/Layout/XContainerFluid.js",
+
+      "source/Component/XAlert.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
