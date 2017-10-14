@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>09-XButtonTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'button',
+                text: 'Primary',
+                cls: 'btn-primary btn-sm',
+                listeners: {
+                    onclick: function () {
+                        alert('You click Primary button.');
+                    }
+                }
+            }, {
+                xtype: 'button',
+                text: 'Secondary',
+                cls: 'btn-secondary btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Success',
+                cls: 'btn-success btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Danger',
+                cls: 'btn-danger btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Warning',
+                cls: 'btn-warning btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Info',
+                cls: 'btn-info btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Light',
+                cls: 'btn-light btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Dark',
+                cls: 'btn-dark btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Link',
+                cls: 'btn-link btn-sm'
+            }, {
+                xtype: 'button',
+                text: 'Primary',
+                cls: 'btn-outline-primary'
+            }, {
+                xtype: 'button',
+                text: 'Secondary',
+                cls: 'btn-outline-secondary'
+            }, {
+                xtype: 'button',
+                text: 'Success',
+                cls: 'btn-outline-success'
+            }, {
+                xtype: 'button',
+                text: 'Danger',
+                cls: 'btn-outline-danger'
+            }, {
+                xtype: 'button',
+                text: 'Warning',
+                cls: 'btn-outline-warning'
+            }, {
+                xtype: 'button',
+                text: 'Info',
+                cls: 'btn-outline-info'
+            }, {
+                xtype: 'button',
+                text: 'Light',
+                cls: 'btn-outline-light'
+            }, {
+                xtype: 'button',
+                text: 'Dark',
+                cls: 'btn-outline-dark'
+            }, {
+                xtype: 'button',
+                text: 'Link',
+                cls: 'btn-outline-link'
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

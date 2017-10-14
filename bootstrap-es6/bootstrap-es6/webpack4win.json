@@ -12,7 +12,8 @@
       "source/Layout/XContainer.js",
       "source/Layout/XContainerFluid.js",
 
-      "source/Component/XAlert.js"
+      "source/Component/XAlert.js",
+      "source/Component/XButton.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
