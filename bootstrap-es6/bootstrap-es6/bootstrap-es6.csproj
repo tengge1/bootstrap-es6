@@ -90,6 +90,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="source\Component\XAlert.js" />
+    <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XButton.js" />
     <Content Include="source\Layout\XContainer.js" />
     <Content Include="source\Layout\XContainerFluid.js" />
@@ -98,6 +99,7 @@
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\10-XBadgeTest.html" />
     <Content Include="test\09-XButtonTest.html" />
     <Content Include="test\08-XAlertTest.html" />
     <Content Include="test\07-XContainerFluidTest.html" />

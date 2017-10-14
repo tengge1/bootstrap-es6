@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>10-XBadgeTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'badge',
+                text: 'Primary',
+                cls: 'badge-primary'
+            }, {
+                xtype: 'badge',
+                text: 'Secondary',
+                cls: 'badge-secondary'
+            }, {
+                xtype: 'badge',
+                text: 'Success',
+                cls: 'badge-success'
+            }, {
+                xtype: 'badge',
+                text: 'Danger',
+                cls: 'badge-danger'
+            }, {
+                xtype: 'badge',
+                text: 'Warning',
+                cls: 'badge-warning'
+            }, {
+                xtype: 'badge',
+                text: 'Info',
+                cls: 'badge-info'
+            }, {
+                xtype: 'badge',
+                text: 'Light',
+                cls: 'badge-light'
+            }, {
+                xtype: 'badge',
+                text: 'Dark',
+                cls: 'badge-dark'
+            }, {
+                xtype: 'badge',
+                text: 'Primary',
+                cls: 'badge-pill badge-primary'
+            }, {
+                xtype: 'badge',
+                text: 'Secondary',
+                cls: 'badge-pill badge-secondary'
+            }, {
+                xtype: 'badge',
+                text: 'Success',
+                cls: 'badge-pill badge-success'
+            }, {
+                xtype: 'badge',
+                text: 'Danger',
+                cls: 'badge-pill badge-danger'
+            }, {
+                xtype: 'badge',
+                text: 'Warning',
+                cls: 'badge-pill badge-warning'
+            }, {
+                xtype: 'badge',
+                text: 'Info',
+                cls: 'badge-pill badge-info'
+            }, {
+                xtype: 'badge',
+                text: 'Light',
+                cls: 'badge-pill badge-light'
+            }, {
+                xtype: 'badge',
+                text: 'Dark',
+                cls: 'badge-pill badge-dark'
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>
