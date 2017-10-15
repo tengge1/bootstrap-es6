@@ -11,6 +11,8 @@
 
       "source/Layout/XContainer.js",
       "source/Layout/XContainerFluid.js",
+      "source/Layout/XRow.js",
+      "source/Layout/XCol.js",
 
       "source/Component/XAlert.js",
       "source/Component/XButton.js",

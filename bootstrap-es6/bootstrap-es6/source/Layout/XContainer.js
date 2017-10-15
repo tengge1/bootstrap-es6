@@ -7,13 +7,9 @@ class XContainer extends XObject {
         this.children = this.config.children || [];
 
         this.el = {};
-        this.hasRendered = false;
     }
 
     render() {
-        if (this.hasRendered) {
-            return;
-        }
         this.el.container = document.createElement('div');
         this.el.container.className = 'container';
         this.container.appendChild(this.el.container);
@@ -25,8 +21,6 @@ class XContainer extends XObject {
                 obj.render.call(obj);
             }
         });
-
-        this.hasRendered = true;
     }
 
 }

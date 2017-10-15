@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>11-XGridSystemTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'row',
+                children: [{
+                    xtype: 'col',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: red;">col</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: green;">col</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: blue;">col</div>'
+                    }]
+                }]
+            }, {
+                xtype: 'html',
+                html: '<div style="height: 20px;"></div>'
+            }, {
+                xtype: 'row',
+                children: [{
+                    xtype: 'col',
+                    cls: 'col-lg-2 col-md-3 col-sm-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #ff0000;">col-lg-2 col-md-3 col-sm-4</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-lg-2 col-md-3 col-sm-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #00ff00;">col-lg-2 col-md-3 col-sm-4</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-lg-2 col-md-3 col-sm-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #0000ff;">col-lg-2 col-md-3 col-sm-4</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-lg-2 col-md-3 col-sm-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #ffff00;">col-lg-2 col-md-3 col-sm-4</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-lg-2 col-md-3 col-sm-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #ff00ff;">col-lg-2 col-md-3 col-sm-4</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-lg-2 col-md-3 col-sm-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #00ffff;">col-lg-2 col-md-3 col-sm-4</div>'
+                    }]
+                }]
+            }, {
+                xtype: 'html',
+                html: '<div style="height: 20px"></div>'
+            }, {
+                xtype: 'row',
+                children: [{
+                    xtype: 'col',
+                    cls: 'col-md-auto',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #ff0000; width: 150px;">col-md-auto<br/> width:150px; </div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-md-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #00ff00;">col-md-4</div>'
+                    }]
+                }, {
+                    xtype: 'col',
+                    cls: 'col-md-4',
+                    children: [{
+                        xtype: 'html',
+                        html: '<div style="background-color: #0000ff;">col-md-4</div>'
+                    }]
+                }]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

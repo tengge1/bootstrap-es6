@@ -203,18 +203,12 @@ class XHtml extends XObject {
         this.html = this.config.html || 'This is XHtml.';
 
         this.el = {};
-        this.hasRendered = false;
     }
 
     render() {
-        if (this.hasRendered) {
-            return;
-        }
-        if (this.container == document.body) {
-            throw 'XHtml: container cannot be document.body.';
-        }
-        this.container.innerHTML = this.html;
-        this.hasRendered = true;
+        this.el.html = document.createElement('div');
+        this.el.html.innerHTML = this.html;
+        this.container.appendChild(this.el.html);
     }
 
 }
@@ -230,13 +224,9 @@ class XContainer extends XObject {
         this.children = this.config.children || [];
 
         this.el = {};
-        this.hasRendered = false;
     }
 
     render() {
-        if (this.hasRendered) {
-            return;
-        }
         this.el.container = document.createElement('div');
         this.el.container.className = 'container';
         this.container.appendChild(this.el.container);
@@ -248,8 +238,6 @@ class XContainer extends XObject {
                 obj.render.call(obj);
             }
         });
-
-        this.hasRendered = true;
     }
 
 }
@@ -265,13 +253,9 @@ class XContainerFluid extends XObject {
         this.children = this.config.children || [];
 
         this.el = {};
-        this.hasRendered = false;
     }
 
     render() {
-        if (this.hasRendered) {
-            return;
-        }
         this.el.container = document.createElement('div');
         this.el.container.className = 'container-fluid';
         this.container.appendChild(this.el.container);
@@ -283,13 +267,70 @@ class XContainerFluid extends XObject {
                 obj.render.call(obj);
             }
         });
-
-        this.hasRendered = true;
     }
 
 }
 
 XType.add('containerfluid', XContainerFluid);
+
+// XRow.js
+
+class XRow extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.row = document.createElement('div');
+        this.el.row.className = 'row';
+        this.container.appendChild(this.el.row);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.row;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('row', XRow);
+
+// XCol.js
+
+class XCol extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.cls = this.config.cls || 'col';
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.col = document.createElement('div');
+        this.el.col.className = this.cls;
+        this.container.appendChild(this.el.col);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.col;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('col', XCol);
 
 // XAlert.js
 

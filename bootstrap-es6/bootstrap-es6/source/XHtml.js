@@ -7,18 +7,12 @@ class XHtml extends XObject {
         this.html = this.config.html || 'This is XHtml.';
 
         this.el = {};
-        this.hasRendered = false;
     }
 
     render() {
-        if (this.hasRendered) {
-            return;
-        }
-        if (this.container == document.body) {
-            throw 'XHtml: container cannot be document.body.';
-        }
-        this.container.innerHTML = this.html;
-        this.hasRendered = true;
+        this.el.html = document.createElement('div');
+        this.el.html.innerHTML = this.html;
+        this.container.appendChild(this.el.html);
     }
 
 }

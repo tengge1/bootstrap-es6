@@ -1,22 +1,23 @@
-﻿// XContainerFluid.js
+﻿// XCol.js
 
-class XContainerFluid extends XObject {
+class XCol extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || 'col';
         this.children = this.config.children || [];
 
         this.el = {};
     }
 
     render() {
-        this.el.container = document.createElement('div');
-        this.el.container.className = 'container-fluid';
-        this.container.appendChild(this.el.container);
+        this.el.col = document.createElement('div');
+        this.el.col.className = this.cls;
+        this.container.appendChild(this.el.col);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.container;
+            obj.container = this.el.col;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }
@@ -25,4 +26,4 @@ class XContainerFluid extends XObject {
 
 }
 
-XType.add('containerfluid', XContainerFluid);
+XType.add('col', XCol);

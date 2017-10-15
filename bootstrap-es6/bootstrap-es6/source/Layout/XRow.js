@@ -1,6 +1,6 @@
-﻿// XContainerFluid.js
+﻿// XRow.js
 
-class XContainerFluid extends XObject {
+class XRow extends XObject {
 
     constructor(config) {
         super(config);
@@ -10,13 +10,13 @@ class XContainerFluid extends XObject {
     }
 
     render() {
-        this.el.container = document.createElement('div');
-        this.el.container.className = 'container-fluid';
-        this.container.appendChild(this.el.container);
+        this.el.row = document.createElement('div');
+        this.el.row.className = 'row';
+        this.container.appendChild(this.el.row);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.container;
+            obj.container = this.el.row;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }
@@ -25,4 +25,4 @@ class XContainerFluid extends XObject {
 
 }
 
-XType.add('containerfluid', XContainerFluid);
+XType.add('row', XRow);

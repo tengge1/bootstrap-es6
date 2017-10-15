@@ -92,13 +92,16 @@
     <Content Include="source\Component\XAlert.js" />
     <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XButton.js" />
+    <Content Include="source\Layout\XCol.js" />
     <Content Include="source\Layout\XContainer.js" />
     <Content Include="source\Layout\XContainerFluid.js" />
+    <Content Include="source\Layout\XRow.js" />
     <Content Include="source\X.js" />
     <Content Include="source\XBootstrap.js" />
     <Content Include="source\XCache.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\11-XGridSystemTest.html" />
     <Content Include="test\10-XBadgeTest.html" />
     <Content Include="test\09-XButtonTest.html" />
     <Content Include="test\08-XAlertTest.html" />
