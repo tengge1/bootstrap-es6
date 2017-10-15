@@ -5,6 +5,7 @@ class XMedia extends XObject {
     constructor(config) {
         super(config);
         this.imgSrc = this.config.imgSrc || null;
+        this.imgCls = this.config.imgCls || 'd-flex mr-3'
         this.imgAlt = this.config.imgAlt || null;
         this.children = this.config.children || [];
 
@@ -21,8 +22,8 @@ class XMedia extends XObject {
         this.container.appendChild(this.el.media);
 
         this.el.img = document.createElement('img');
-        this.el.img.className = 'd-flex mr-3';
         this.el.img.src = this.imgSrc;
+        this.el.img.className = this.imgCls;
         this.el.img.alt = this.imgAlt;
         this.el.media.appendChild(this.el.img);
 
