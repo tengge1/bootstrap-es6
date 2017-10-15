@@ -13,6 +13,7 @@
       "source/Layout/XContainerFluid.js",
       "source/Layout/XRow.js",
       "source/Layout/XCol.js",
+      "source/Layout/XMedia.js",
 
       "source/Component/XAlert.js",
       "source/Component/XButton.js",
