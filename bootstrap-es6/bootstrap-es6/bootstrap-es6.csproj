@@ -92,6 +92,7 @@
     <Content Include="source\Component\XAlert.js" />
     <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XButton.js" />
+    <Content Include="source\Content\XDefinitionList.js" />
     <Content Include="source\Content\XList.js" />
     <Content Include="source\Layout\XCol.js" />
     <Content Include="source\Layout\XContainer.js" />
