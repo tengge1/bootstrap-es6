@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>13-XListTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'list',
+                children: [{
+                    xtype: 'html',
+                    html: 'Lorem ipsum dolor sit amet'
+                }, {
+                    xtype: 'html',
+                    html: 'Consectetur adipiscing elit'
+                }, {
+                    xtype: 'child',
+                    children: [{
+                        xtype: 'html',
+                        html: 'Nulla volutpat aliquam velit'
+                    }, {
+                        xtype: 'list',
+                        children: [{
+                            xtype: 'html',
+                            html: 'Lorem ipsum dolor sit amet'
+                        }, {
+                            xtype: 'html',
+                            html: 'Consectetur adipiscing elit'
+                        }]
+                    }]
+                }]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>
