@@ -17,6 +17,8 @@
       "source/Layout/XMedia.js",
 
       "source/Content/XList.js",
+      "source/Content/XDefinitionList.js",
+      "source/Content/XDefinitionItem.js",
 
       "source/Component/XAlert.js",
       "source/Component/XButton.js",

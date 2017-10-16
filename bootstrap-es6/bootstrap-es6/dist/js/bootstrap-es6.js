@@ -442,6 +442,68 @@ class XList extends XObject {
 
 XType.add('list', XList);
 
+// DefinitionList.js
+
+class XDefinitionList extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.dl = document.createElement('dl');
+        this.container.appendChild(this.el.dl);
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            if (!obj instanceof XDefinitionItem) {
+                throw 'XDefinitionList: config.children is not an array of instance of XDefinitionItem';
+            }
+            obj.container = this.el.dl;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('definitionlist', XDefinitionList);
+
+
+// XDefinitionItem.js
+
+class XDefinitionItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.title = this.config.title || 'title';
+        this.text = this.config.text || 'text';
+
+        this.el = {};
+    }
+
+    render() {
+        if (this.container == null) {
+            throw 'XDefinitionItem: config.container is undefined.';
+        }
+        if (this.container.tagName == null || this.container.tagName.toLowerCase() != 'dl') {
+            throw 'XDefinitionItem: config.container is not HTMLElement';
+        }
+        this.el.dt = document.createElement('dt');
+        this.el.dt.innerHTML = this.title;
+        this.container.appendChild(this.el.dt);
+        this.el.dd = document.createElement('dd');
+        this.el.dd.innerHTML = this.text;
+        this.container.appendChild(this.el.dd);
+    }
+
+}
+
+XType.add('definitionitem', XDefinitionItem);
+
 // XAlert.js
 
 class XAlert extends XObject {

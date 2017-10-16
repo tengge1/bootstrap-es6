@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>14-XDefinitionListTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'definitionlist',
+                children: [{
+                    xtype: 'definitionitem',
+                    title: 'Description lists',
+                    text: 'A description list is perfect for defining terms.'
+                }, {
+                    xtype: 'definitionitem',
+                    title: 'Description lists',
+                    text: 'A description list is perfect for defining terms.'
+                }, {
+                    xtype: 'definitionitem',
+                    title: 'Description lists',
+                    text: 'A description list is perfect for defining terms.'
+                }]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

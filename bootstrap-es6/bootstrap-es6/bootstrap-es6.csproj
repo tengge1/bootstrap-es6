@@ -92,6 +92,7 @@
     <Content Include="source\Component\XAlert.js" />
     <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XButton.js" />
+    <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
     <Content Include="source\Content\XList.js" />
     <Content Include="source\Layout\XCol.js" />
@@ -105,6 +106,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\14-XDefinitionListTest.html" />
     <Content Include="test\13-XListTest.html" />
     <Content Include="test\12-XMediaTest.html" />
     <Content Include="test\11-XGridSystemTest.html" />
