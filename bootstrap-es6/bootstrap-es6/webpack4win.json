@@ -31,7 +31,9 @@
 
       "source/Component/XAlert.js",
       "source/Component/XButton.js",
-      "source/Component/XBadge.js"
+      "source/Component/XBadge.js",
+      "source/Component/XBreadcrumb.js",
+      "source/Component/XBreadcrumbItem.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

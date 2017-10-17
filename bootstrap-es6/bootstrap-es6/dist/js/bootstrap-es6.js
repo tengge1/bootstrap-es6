@@ -920,3 +920,77 @@ class XBadge extends XObject {
 
 XType.add('badge', XBadge);
 
+// XBreadcrumb.js
+
+class XBreadcrumb extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.ol = document.createElement('ol');
+        this.el.ol.className = 'breadcrumb';
+        this.container.appendChild(this.el.ol);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            if (!obj instanceof XBreadcrumbItem) {
+                throw 'XBreadcrumb: config.children is not a list of XBreadcrumbItem.';
+            }
+            obj.container = this.el.ol;
+            if (i == this.children.length - 1) {
+                obj.active = true;
+            }
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('breadcrumb', XBreadcrumb);
+
+// XBreadcrumbItem.js
+
+class XBreadcrumbItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text || 'text';
+        this.url = this.config.url || null;
+        this.active = this.config.active || (this.url ? false : true);
+
+        this.el = {};
+    }
+
+    render() {
+        if (!this.container instanceof XBreadcrumb) {
+            throw 'XBreadcrumbItem: config.container is not an instance of XBreadcrumb.';
+        }
+        this.el.li = document.createElement('li');
+        this.el.li.className = 'breadcrumb-item';
+        if (this.active) {
+            this.el.li.className += ' active';
+        }
+        if (!this.url) {
+            this.el.li.innerHTML = this.text;
+        }
+        this.container.appendChild(this.el.li);
+
+        if (this.url) {
+            this.el.a = document.createElement('a');
+            this.el.a.href = this.url;
+            this.el.a.innerHTML = this.text;
+            this.el.li.appendChild(this.el.a);
+        }
+    }
+
+}
+
+XType.add('breadcrumbitem', XBreadcrumbItem);
+

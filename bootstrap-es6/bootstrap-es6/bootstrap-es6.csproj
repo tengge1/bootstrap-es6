@@ -89,8 +89,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="source\Component\XBreadcrumb.js" />
     <Content Include="source\Component\XAlert.js" />
     <Content Include="source\Component\XBadge.js" />
+    <Content Include="source\Component\XBreadcrumbItem.js" />
     <Content Include="source\Component\XButton.js" />
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
@@ -115,6 +117,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\19-XBreadcrumbTest.html" />
     <Content Include="test\18-XFigureTest.html" />
     <Content Include="test\17-XImageTest.html" />
     <Content Include="test\16-XCodeTest.html" />
