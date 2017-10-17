@@ -95,6 +95,11 @@
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
     <Content Include="source\Content\XList.js" />
+    <Content Include="source\Content\XTable.js" />
+    <Content Include="source\Content\XTBody.js" />
+    <Content Include="source\Content\XTData.js" />
+    <Content Include="source\Content\XTHead.js" />
+    <Content Include="source\Content\XTRow.js" />
     <Content Include="source\Layout\XCol.js" />
     <Content Include="source\Layout\XContainer.js" />
     <Content Include="source\Layout\XContainerFluid.js" />
@@ -106,6 +111,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\15-XTableTest.html" />
     <Content Include="test\14-XDefinitionListTest.html" />
     <Content Include="test\13-XListTest.html" />
     <Content Include="test\12-XMediaTest.html" />

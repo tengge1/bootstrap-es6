@@ -19,6 +19,11 @@
       "source/Content/XList.js",
       "source/Content/XDefinitionList.js",
       "source/Content/XDefinitionItem.js",
+      "source/Content/XTable.js",
+      "source/Content/XTHead.js",
+      "source/Content/XTBody.js",
+      "source/Content/XTRow.js",
+      "source/Content/XTData.js",
 
       "source/Component/XAlert.js",
       "source/Component/XButton.js",
