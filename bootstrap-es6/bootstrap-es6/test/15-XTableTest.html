@@ -17,11 +17,22 @@
             container: document.body,
             children: [{
                 xtype: 'table',
+                dark: false,
+                striped: true,
+                bordered: true,
+                hover: true,
+                sm: false,
                 children: [{
                     xtype: 'thead',
                     children: [{
                         xtype: 'tr',
                         children: [{
+                            xtype: 'th',
+                            children: [{
+                                xtype: 'html',
+                                html: '#'
+                            }]
+                        }, {
                             xtype: 'th',
                             children: [{
                                 xtype: 'html',
@@ -51,7 +62,150 @@
                     xtype: 'tbody',
                     children: [{
                         xtype: 'tr',
+                        cls: 'table-primary',
                         children: [{
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: '1'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }]
+                    }, {
+                        xtype: 'tr',
+                        cls: 'table-success',
+                        children: [{
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: '2'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }]
+                    }, {
+                        xtype: 'tr',
+                        cls: 'table-danger',
+                        children: [{
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: '3'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }]
+                    }, {
+                        xtype: 'tr',
+                        cls: 'table-warning',
+                        children: [{
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: '4'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }, {
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: 'Table cell'
+                            }]
+                        }]
+                    }, {
+                        xtype: 'tr',
+                        cls: 'table-info',
+                        children: [{
+                            xtype: 'td',
+                            children: [{
+                                xtype: 'html',
+                                html: '5'
+                            }]
+                        }, {
                             xtype: 'td',
                             children: [{
                                 xtype: 'html',

@@ -20,6 +20,7 @@
       "source/Content/XDefinitionList.js",
       "source/Content/XDefinitionItem.js",
       "source/Content/XCode.js",
+      "source/Content/XImage.js",
       "source/Content/XTable.js",
       "source/Content/XTHead.js",
       "source/Content/XTBody.js",

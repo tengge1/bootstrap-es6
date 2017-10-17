@@ -544,6 +544,35 @@ class XCode extends XObject {
 
 XType.add('code', XCode);
 
+// XImage.js
+
+class XImage extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.src = this.config.src || '';
+        this.cls = this.config.cls || null;
+        this.alt = this.config.alt || null;
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.image = document.createElement('img');
+        this.el.image.src = this.src;
+        if (this.cls) {
+            this.el.image.className = this.cls;
+        }
+        if (this.alt) {
+            this.el.image.alt = this.alt;
+        }
+        this.container.appendChild(this.el.image);
+    }
+
+}
+
+XType.add('image', XImage);
+
 // XTable.js
 
 class XTable extends XObject {
@@ -551,12 +580,33 @@ class XTable extends XObject {
     constructor(config) {
         super(config);
         this.children = this.config.children || [];
+        this.dark = this.config.dark || false;
+        this.striped = this.config.striped || false;
+        this.bordered = this.config.bordered || false;
+        this.hover = this.config.hover || false;
+        this.sm = this.config.sm || false;
 
         this.el = {};
     }
 
     render() {
         this.el.table = document.createElement('table');
+        this.el.table.className = 'table';
+        if (this.dark) {
+            this.el.table.className += ' table-dark';
+        }
+        if (this.striped) {
+            this.el.table.className += ' table-striped';
+        }
+        if (this.bordered) {
+            this.el.table.className += ' table-bordered';
+        }
+        if (this.hover) {
+            this.el.table.className += ' table-hover';
+        }
+        if (this.sm) {
+            this.el.table.className += ' table-sm';
+        }
         this.container.appendChild(this.el.table);
 
         this.children.forEach((n, i) => {
@@ -636,6 +686,7 @@ class XTR extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || null;
         this.children = this.config.children || [];
 
         this.el = {};
@@ -643,6 +694,9 @@ class XTR extends XObject {
 
     render() {
         this.el.tr = document.createElement('tr');
+        if (this.cls) {
+            this.el.tr.className = this.cls;
+        }
         this.container.appendChild(this.el.tr);
 
         this.children.forEach((n, i) => {
