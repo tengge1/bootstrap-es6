@@ -95,6 +95,7 @@
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
+    <Content Include="source\Content\XFigure.js" />
     <Content Include="source\Content\XImage.js" />
     <Content Include="source\Content\XList.js" />
     <Content Include="source\Content\XTable.js" />
@@ -114,6 +115,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\18-XFigureTest.html" />
     <Content Include="test\17-XImageTest.html" />
     <Content Include="test\16-XCodeTest.html" />
     <Content Include="test\15-XTableTest.html" />

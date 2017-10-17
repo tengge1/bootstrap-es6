@@ -27,6 +27,7 @@
       "source/Content/XTR.js",
       "source/Content/XTH.js",
       "source/Content/XTD.js",
+      "source/Content/XFigure.js",
 
       "source/Component/XAlert.js",
       "source/Component/XButton.js",
