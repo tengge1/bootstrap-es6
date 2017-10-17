@@ -30,10 +30,10 @@
       "source/Content/XFigure.js",
 
       "source/Component/XAlert.js",
-      "source/Component/XButton.js",
       "source/Component/XBadge.js",
       "source/Component/XBreadcrumb.js",
-      "source/Component/XBreadcrumbItem.js"
+      "source/Component/XBreadcrumbItem.js",
+      "source/Component/XButton.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
