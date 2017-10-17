@@ -414,6 +414,8 @@ class XList extends XObject {
 
     constructor(config) {
         super(config);
+        this.unstyled = this.config.unstyled || false;
+        this.inline = this.config.inline || false;
         this.tagName = this.config.tagName || 'ul';
         this.children = this.config.children || [];
 
@@ -422,12 +424,20 @@ class XList extends XObject {
 
     render() {
         this.el.list = document.createElement(this.tagName);
+        if (this.inline) {
+            this.el.list.className = 'list-inline';
+        } else if (this.unstyled) {
+            this.el.list.className = 'list-unstyled';
+        }
         this.container.appendChild(this.el.list);
 
         this.el.li = [];
 
         this.children.forEach((n, i) => {
             this.el.li[i] = document.createElement('li');
+            if (this.inline) {
+                this.el.li[i].className = 'list-inline-item';
+            }
             this.el.list.appendChild(this.el.li[i]);
 
             var obj = X.create(n);
@@ -503,6 +513,36 @@ class XDefinitionItem extends XObject {
 }
 
 XType.add('definitionitem', XDefinitionItem);
+
+// XCode.js
+
+class XCode extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.inline = this.config.inline || false;
+        this.scrollable = this.config.scrollable || false;
+
+        this.el = {};
+    }
+
+    render() {
+        if (this.inline) {
+            this.el.code = document.createElement('code');
+        } else {
+            this.el.code = document.createElement('pre');
+            if (this.scrollable) {
+                this.el.code.className = 'pre-scrollable';
+            }
+        }
+        this.el.code.innerHTML = this.html;
+        this.container.appendChild(this.el.code);
+    }
+
+}
+
+XType.add('code', XCode);
 
 // XTable.js
 
@@ -590,9 +630,9 @@ class XTBody extends XObject {
 
 XType.add('tbody', XTBody);
 
-// XTRow.js
+// XTR.js
 
-class XTRow extends XObject {
+class XTR extends XObject {
 
     constructor(config) {
         super(config);
@@ -616,11 +656,39 @@ class XTRow extends XObject {
 
 }
 
-XType.add('tr', XTRow);
+XType.add('tr', XTR);
 
-// XTData.js
+// XTH.js
 
-class XTData extends XObject {
+class XTH extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.th = document.createElement('th');
+        this.container.appendChild(this.el.th);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.th;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('th', XTH);
+
+// XTD.js
+
+class XTD extends XObject {
 
     constructor(config) {
         super(config);
@@ -644,7 +712,7 @@ class XTData extends XObject {
 
 }
 
-XType.add('td', XTData);
+XType.add('td', XTD);
 
 // XAlert.js
 

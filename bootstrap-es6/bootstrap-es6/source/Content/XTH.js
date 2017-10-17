@@ -1,6 +1,6 @@
-﻿// XTRow.js
+﻿// XTH.js
 
-class XTRow extends XObject {
+class XTH extends XObject {
 
     constructor(config) {
         super(config);
@@ -10,12 +10,12 @@ class XTRow extends XObject {
     }
 
     render() {
-        this.el.tr = document.createElement('tr');
-        this.container.appendChild(this.el.tr);
+        this.el.th = document.createElement('th');
+        this.container.appendChild(this.el.th);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.tr;
+            obj.container = this.el.th;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }
@@ -24,4 +24,4 @@ class XTRow extends XObject {
 
 }
 
-XType.add('tr', XTRow);
+XType.add('th', XTH);

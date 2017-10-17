@@ -1,6 +1,6 @@
-﻿// XTData.js
+﻿// XTR.js
 
-class XTData extends XObject {
+class XTR extends XObject {
 
     constructor(config) {
         super(config);
@@ -10,12 +10,12 @@ class XTData extends XObject {
     }
 
     render() {
-        this.el.td = document.createElement('td');
-        this.container.appendChild(this.el.td);
+        this.el.tr = document.createElement('tr');
+        this.container.appendChild(this.el.tr);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.td;
+            obj.container = this.el.tr;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }
@@ -24,4 +24,4 @@ class XTData extends XObject {
 
 }
 
-XType.add('td', XTData);
+XType.add('tr', XTR);
