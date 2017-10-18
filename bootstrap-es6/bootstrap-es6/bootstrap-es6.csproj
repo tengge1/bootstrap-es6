@@ -118,6 +118,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\20-XButtonGroupTest.html" />
     <Content Include="test\19-XBreadcrumbTest.html" />
     <Content Include="test\18-XFigureTest.html" />
     <Content Include="test\17-XImageTest.html" />

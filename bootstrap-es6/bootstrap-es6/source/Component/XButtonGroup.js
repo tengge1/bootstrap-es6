@@ -4,6 +4,7 @@ class XButtonGroup extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || '';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -11,7 +12,7 @@ class XButtonGroup extends XObject {
 
     render() {
         this.el.group = document.createElement('div');
-        this.el.group.className = 'btn-group';
+        this.el.group.className = 'btn-group ' + this.cls;
         this.el.group.role = 'group';
         this.container.appendChild(this.el.group);
 
