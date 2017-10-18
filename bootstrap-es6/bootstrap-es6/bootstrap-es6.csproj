@@ -94,6 +94,7 @@
     <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XBreadcrumbItem.js" />
     <Content Include="source\Component\XButton.js" />
+    <Content Include="source\Component\XButtonGroup.js" />
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
