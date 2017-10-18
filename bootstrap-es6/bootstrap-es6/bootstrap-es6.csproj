@@ -77,6 +77,7 @@
     <Content Include="dist\js\jquery.min.js" />
     <Content Include="dist\js\popper.js" />
     <Content Include="dist\js\popper.min.js" />
+    <Content Include="image\eagle.jpg" />
     <Content Include="image\timg.gif" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -95,6 +96,7 @@
     <Content Include="source\Component\XBreadcrumbItem.js" />
     <Content Include="source\Component\XButton.js" />
     <Content Include="source\Component\XButtonGroup.js" />
+    <Content Include="source\Component\XCard.js" />
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />

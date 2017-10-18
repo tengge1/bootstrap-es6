@@ -7,6 +7,8 @@ class XImage extends XObject {
         this.src = this.config.src || '';
         this.cls = this.config.cls || null;
         this.alt = this.config.alt || null;
+        this.width = this.config.width || null;
+        this.height = this.config.height || null;
 
         this.el = {};
     }
@@ -19,6 +21,12 @@ class XImage extends XObject {
         }
         if (this.alt) {
             this.el.image.alt = this.alt;
+        }
+        if (this.width) {
+            this.el.image.style.width = this.width;
+        }
+        if (this.height) {
+            this.el.image.style.height = this.height;
         }
         this.container.appendChild(this.el.image);
     }
