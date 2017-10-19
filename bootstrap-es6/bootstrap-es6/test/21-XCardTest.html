@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>21-XCardTest1</title>
+    <title>21-XCardTest</title>
     <link href="../dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,6 +17,7 @@
             container: document.body,
             children: [{
                 xtype: 'card',
+                width: '400px',
                 children: [{
                     xtype: 'cardimage',
                     src: '../image/eagle.jpg'
@@ -28,6 +29,10 @@
                     }, {
                         xtype: 'cardtext',
                         html: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+                    }, {
+                        xtype: 'linkbutton',
+                        text: 'Go somewhere',
+                        url: '#'
                     }]
                 }]
             }]

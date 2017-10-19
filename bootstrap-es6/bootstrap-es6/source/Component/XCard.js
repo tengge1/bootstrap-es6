@@ -4,6 +4,8 @@ class XCard extends XObject {
 
     constructor(config) {
         super(config);
+        this.width = this.config.width || 'auto';
+        this.height = this.config.height || 'auto';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -11,6 +13,9 @@ class XCard extends XObject {
 
     render() {
         this.el.card = document.createElement('div');
+        this.el.card.className = 'card';
+        this.el.card.style.width = this.width;
+        this.el.card.style.height = this.height;
         this.container.appendChild(this.el.card);
 
         this.children.forEach((n, i) => {

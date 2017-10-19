@@ -4,6 +4,7 @@ class XCardText extends XObject {
 
     constructor(config) {
         super(config);
+        this.html = this.config.html || 'html';
 
         this.el = {};
     }
@@ -11,6 +12,7 @@ class XCardText extends XObject {
     render() {
         this.el.text = document.createElement('p');
         this.el.text.className = 'card-text';
+        this.el.text.innerHTML = this.html;
         this.container.appendChild(this.el.text);
     }
 

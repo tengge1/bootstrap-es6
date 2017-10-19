@@ -11,6 +11,7 @@ class XCardTitle extends XObject {
 
     render() {
         this.el.title = document.createElement('h4');
+        this.el.title.className = 'card-title';
         this.el.title.innerHTML = this.html;
         this.container.appendChild(this.el.title);
     }

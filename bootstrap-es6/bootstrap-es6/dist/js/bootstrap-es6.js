@@ -981,26 +981,48 @@ class XButton extends XObject {
         this.listeners = this.config.listeners || null;
 
         this.el = {};
-        this.hasRendered = false;
     }
 
     render() {
-        if (this.hasRendered) {
-            return;
-        }
         this.el.button = document.createElement('button');
         this.el.button.type = 'button';
         this.el.button.innerHTML = this.text;
         this.el.button.className = 'btn ' + this.cls;
         this.container.appendChild(this.el.button);
         new XEvent(this.el.button, this.listeners);
-
-        this.hasRendered = true;
     }
 
 }
 
 XType.add('button', XButton);
+
+// XLinkButton.js
+
+class XLinkButton extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text || 'Button';
+        this.cls = this.config.cls || 'btn-primary';
+        this.url = this.config.url || '#';
+        this.listeners = this.config.listeners || null;
+
+        this.el = {};
+        this.hasRendered = false;
+    }
+
+    render() {
+        this.el.a = document.createElement('a');
+        this.el.a.innerHTML = this.text;
+        this.el.a.className = 'btn ' + this.cls;
+        this.el.a.href = this.url;
+        this.container.appendChild(this.el.a);
+        new XEvent(this.el.a, this.listeners);
+    }
+
+}
+
+XType.add('linkbutton', XLinkButton);
 
 // XButtonGroup.js
 
@@ -1043,6 +1065,8 @@ class XCard extends XObject {
 
     constructor(config) {
         super(config);
+        this.width = this.config.width || 'auto';
+        this.height = this.config.height || 'auto';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -1050,6 +1074,9 @@ class XCard extends XObject {
 
     render() {
         this.el.card = document.createElement('div');
+        this.el.card.className = 'card';
+        this.el.card.style.width = this.width;
+        this.el.card.style.height = this.height;
         this.container.appendChild(this.el.card);
 
         this.children.forEach((n, i) => {
@@ -1131,6 +1158,7 @@ class XCardTitle extends XObject {
 
     render() {
         this.el.title = document.createElement('h4');
+        this.el.title.className = 'card-title';
         this.el.title.innerHTML = this.html;
         this.container.appendChild(this.el.title);
     }
@@ -1145,6 +1173,7 @@ class XCardText extends XObject {
 
     constructor(config) {
         super(config);
+        this.html = this.config.html || 'html';
 
         this.el = {};
     }
@@ -1152,6 +1181,7 @@ class XCardText extends XObject {
     render() {
         this.el.text = document.createElement('p');
         this.el.text.className = 'card-text';
+        this.el.text.innerHTML = this.html;
         this.container.appendChild(this.el.text);
     }
 
