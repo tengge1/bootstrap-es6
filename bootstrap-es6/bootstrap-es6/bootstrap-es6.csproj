@@ -95,6 +95,7 @@
     <Content Include="source\Component\XAlert.js" />
     <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XBreadcrumbItem.js" />
+    <Content Include="source\Component\XListGroup.js" />
     <Content Include="source\Component\XCardSubTitle.js" />
     <Content Include="source\Component\XLinkButton.js" />
     <Content Include="source\Component\XButton.js" />
