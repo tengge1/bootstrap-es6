@@ -1037,3 +1037,125 @@ class XButtonGroup extends XObject {
 
 XType.add('buttongroup', XButtonGroup);
 
+// XCard.js
+
+class XCard extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.card = document.createElement('div');
+        this.container.appendChild(this.el.card);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.card;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('card', XCard);
+
+// XCardImage.js
+
+class XCardImage extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.src = this.config.src || '';
+        this.alt = this.config.alt || null;
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.img = document.createElement('img');
+        this.el.img.className = 'card-img-top';
+        this.el.img.src = this.src;
+        this.el.img.alt = this.alt;
+        this.container.appendChild(this.el.img);
+    }
+
+}
+
+XType.add('cardimage', XCardImage);
+
+// XCardBody.js
+
+class XCardBody extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.body = document.createElement('div');
+        this.el.body.className = 'card-body';
+        this.container.appendChild(this.el.body);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.body;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('cardbody', XCardBody);
+
+// XCardTitle.js
+
+class XCardTitle extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.title = document.createElement('h4');
+        this.el.title.innerHTML = this.html;
+        this.container.appendChild(this.el.title);
+    }
+
+}
+
+XType.add('cardtitle', XCardTitle);
+
+// XCardText.js
+
+class XCardText extends XObject {
+
+    constructor(config) {
+        super(config);
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.text = document.createElement('p');
+        this.el.text.className = 'card-text';
+        this.container.appendChild(this.el.text);
+    }
+
+}
+
+XType.add('cardtext', XCardText);
+

@@ -34,7 +34,12 @@
       "source/Component/XBreadcrumb.js",
       "source/Component/XBreadcrumbItem.js",
       "source/Component/XButton.js",
-      "source/Component/XButtonGroup.js"
+      "source/Component/XButtonGroup.js",
+      "source/Component/XCard.js",
+      "source/Component/XCardImage.js",
+      "source/Component/XCardBody.js",
+      "source/Component/XCardTitle.js",
+      "source/Component/XCardText.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

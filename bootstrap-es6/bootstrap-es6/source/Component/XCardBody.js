@@ -1,6 +1,6 @@
-﻿// XCard.js
+﻿// XCardBody.js
 
-class XCard extends XObject {
+class XCardBody extends XObject {
 
     constructor(config) {
         super(config);
@@ -10,12 +10,13 @@ class XCard extends XObject {
     }
 
     render() {
-        this.el.card = document.createElement('div');
-        this.container.appendChild(this.el.card);
+        this.el.body = document.createElement('div');
+        this.el.body.className = 'card-body';
+        this.container.appendChild(this.el.body);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.card;
+            obj.container = this.el.body;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }
@@ -24,4 +25,4 @@ class XCard extends XObject {
 
 }
 
-XType.add('card', XCard);
+XType.add('cardbody', XCardBody);

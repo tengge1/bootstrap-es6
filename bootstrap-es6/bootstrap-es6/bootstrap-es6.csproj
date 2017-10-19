@@ -97,6 +97,10 @@
     <Content Include="source\Component\XButton.js" />
     <Content Include="source\Component\XButtonGroup.js" />
     <Content Include="source\Component\XCard.js" />
+    <Content Include="source\Component\XCardBody.js" />
+    <Content Include="source\Component\XCardImage.js" />
+    <Content Include="source\Component\XCardText.js" />
+    <Content Include="source\Component\XCardTitle.js" />
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
@@ -120,6 +124,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\21-XCardTest1.html" />
     <Content Include="test\20-XButtonGroupTest.html" />
     <Content Include="test\19-XBreadcrumbTest.html" />
     <Content Include="test\18-XFigureTest.html" />
