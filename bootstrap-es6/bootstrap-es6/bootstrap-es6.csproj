@@ -90,10 +90,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="source\Component\XCardLink.js" />
     <Content Include="source\Component\XBreadcrumb.js" />
     <Content Include="source\Component\XAlert.js" />
     <Content Include="source\Component\XBadge.js" />
     <Content Include="source\Component\XBreadcrumbItem.js" />
+    <Content Include="source\Component\XCardSubTitle.js" />
     <Content Include="source\Component\XLinkButton.js" />
     <Content Include="source\Component\XButton.js" />
     <Content Include="source\Component\XButtonGroup.js" />

@@ -40,7 +40,9 @@
       "source/Component/XCardImage.js",
       "source/Component/XCardBody.js",
       "source/Component/XCardTitle.js",
-      "source/Component/XCardText.js"
+      "source/Component/XCardSubTitle.js",
+      "source/Component/XCardText.js",
+      "source/Component/XCardLink.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

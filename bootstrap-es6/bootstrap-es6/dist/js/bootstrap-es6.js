@@ -1167,6 +1167,28 @@ class XCardTitle extends XObject {
 
 XType.add('cardtitle', XCardTitle);
 
+// XCardSubTitle.js
+
+class XCardSubTitle extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.title = document.createElement('h6');
+        this.el.title.className = 'card-subtitle mb-2 text-muted';
+        this.el.title.innerHTML = this.html;
+        this.container.appendChild(this.el.title);
+    }
+
+}
+
+XType.add('cardsubtitle', XCardSubTitle);
+
 // XCardText.js
 
 class XCardText extends XObject {
@@ -1188,4 +1210,29 @@ class XCardText extends XObject {
 }
 
 XType.add('cardtext', XCardText);
+
+// XCardLink.js
+
+class XCardLink extends XObject {
+
+    constructor(config) {
+        super(config);
+
+        this.text = this.config.text || 'text';
+        this.url = this.config.url || '#';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.link = document.createElement('a');
+        this.el.link.className = 'card-link';
+        this.el.link.innerHTML = this.text;
+        this.el.link.href = this.url;
+        this.container.appendChild(this.el.link);
+    }
+
+}
+
+XType.add('cardlink', XCardLink);
 

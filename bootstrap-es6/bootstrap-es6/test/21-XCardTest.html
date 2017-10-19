@@ -16,23 +16,55 @@
         var container = new XContainer({
             container: document.body,
             children: [{
-                xtype: 'card',
-                width: '400px',
+                xtype: 'row',
                 children: [{
-                    xtype: 'cardimage',
-                    src: '../image/eagle.jpg'
-                }, {
-                    xtype: 'cardbody',
+                    xtype: 'col',
                     children: [{
-                        xtype: 'cardtitle',
-                        html: 'Card title'
-                    }, {
-                        xtype: 'cardtext',
-                        html: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                    }, {
-                        xtype: 'linkbutton',
-                        text: 'Go somewhere',
-                        url: '#'
+                        xtype: 'card',
+                        width: '400px',
+                        children: [{
+                            xtype: 'cardimage',
+                            src: '../image/eagle.jpg'
+                        }, {
+                            xtype: 'cardbody',
+                            children: [{
+                                xtype: 'cardtitle',
+                                html: 'Card title'
+                            }, {
+                                xtype: 'cardtext',
+                                html: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+                            }, {
+                                xtype: 'linkbutton',
+                                text: 'Go somewhere',
+                                url: '#'
+                            }]
+                        }]
+                    }]
+                }, {
+                    xtype: 'col',
+                    children: [{
+                        xtype: 'card',
+                        width: '400px',
+                        children: [{
+                            xtype: 'cardbody',
+                            children: [{
+                                xtype: 'cardtitle',
+                                html: 'Card title'
+                            }, {
+                                xtype: 'cardsubtitle',
+                                html: 'Card subtitle'
+                            }, {
+                                xtype: 'cardtext',
+                                html: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+                            }, {
+                                xtype: 'cardlink',
+                                text: 'Card link',
+                                url: '#'
+                            }, {
+                                xtype: 'cardlink',
+                                text: 'Another link'
+                            }]
+                        }]
                     }]
                 }]
             }]
