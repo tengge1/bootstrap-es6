@@ -4,6 +4,7 @@ class XListGroup extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || '';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -11,7 +12,7 @@ class XListGroup extends XObject {
 
     render() {
         this.el.group = document.createElement('ul');
-        this.el.group.className = 'list-group';
+        this.el.group.className = 'list-group ' + this.cls;
         this.container.appendChild(this.el.group);
 
         this.children.forEach((n, i) => {

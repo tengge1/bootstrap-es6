@@ -1238,12 +1238,57 @@ class XCardLink extends XObject {
 
 XType.add('cardlink', XCardLink);
 
+// XCardHeader.js
+
+class XCardHeader extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.header = document.createElement('div');
+        this.el.header.className = 'card-header';
+        this.el.header.innerHTML = this.html;
+        this.container.appendChild(this.el.header);
+    }
+
+}
+
+XType.add('cardheader', XCardHeader);
+
+// XCardFooter.js
+
+class XCardFooter extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.footer = document.createElement('div');
+        this.el.footer.className = 'card-footer';
+        this.el.footer.innerHTML = this.html;
+        this.container.appendChild(this.el.footer);
+    }
+
+}
+
+XType.add('cardfooter', XCardFooter);
+
 // XListGroup.js
 
 class XListGroup extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || '';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -1251,7 +1296,7 @@ class XListGroup extends XObject {
 
     render() {
         this.el.group = document.createElement('ul');
-        this.el.group.className = 'list-group';
+        this.el.group.className = 'list-group ' + this.cls;
         this.container.appendChild(this.el.group);
 
         this.children.forEach((n, i) => {
