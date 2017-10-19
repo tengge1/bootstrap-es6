@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>23-XCarouselTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'carousel',
+                width: '300px',
+                children: [{
+                    xtype: 'carouselinner',
+                    children: [{
+                        xtype: 'carouselitem',
+                        active: true,
+                        children: [{
+                            xtype: 'image',
+                            src: '../image/cat1.jpg',
+                            cls: 'd-block w-100',
+                            alt: 'First slide'
+                        }]
+                    }, {
+                        xtype: 'carouselitem',
+                        children: [{
+                            xtype: 'image',
+                            src: '../image/cat2.jpg',
+                            cls: 'd-block w-100',
+                            alt: 'First slide'
+                        }]
+                    }, {
+                        xtype: 'carouselitem',
+                        children: [{
+                            xtype: 'image',
+                            src: '../image/eagle.jpg',
+                            cls: 'd-block w-100',
+                            alt: 'First slide'
+                        }]
+                    }, {
+                        xtype: 'carouselitem',
+                        children: [{
+                            xtype: 'image',
+                            src: '../image/wolf.jpg',
+                            cls: 'd-block w-100',
+                            alt: 'First slide'
+                        }]
+                    }]
+                }]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

@@ -1282,6 +1282,102 @@ class XCardFooter extends XObject {
 
 XType.add('cardfooter', XCardFooter);
 
+// XCarousel.js
+
+class XCarousel extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.width = this.config.width || 'auto';
+        this.height = this.config.height || 'auto';
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.carousel = document.createElement('div');
+        this.el.carousel.className = 'carousel slide';
+        this.el.carousel.setAttribute('data-ride', 'carousel');
+        this.el.carousel.style.width = this.width;
+        this.el.carousel.style.height = this.height;
+        this.container.appendChild(this.el.carousel);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.carousel;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('carousel', XCarousel);
+
+// XCarouselInner.js
+
+class XCarouselInner extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.inner = document.createElement('div');
+        this.el.inner.className = 'carousel-inner';
+        this.container.appendChild(this.el.inner);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.inner;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('carouselinner', XCarouselInner);
+
+// XCarouselItem.js
+
+class XCarouselItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.active = this.config.active || false;
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.item = document.createElement('div');
+        this.el.item.className = 'carousel-item';
+        if (this.active) {
+            this.el.item.className += ' active';
+        }
+        this.container.appendChild(this.el.item);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.item;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('carouselitem', XCarouselItem);
+
 // XListGroup.js
 
 class XListGroup extends XObject {

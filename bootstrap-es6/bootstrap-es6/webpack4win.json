@@ -45,6 +45,9 @@
       "source/Component/XCardLink.js",
       "source/Component/XCardHeader.js",
       "source/Component/XCardFooter.js",
+      "source/Component/XCarousel.js",
+      "source/Component/XCarouselInner.js",
+      "source/Component/XCarouselItem.js",
       "source/Component/XListGroup.js",
       "source/Component/XListGroupItem.js"
     ],
