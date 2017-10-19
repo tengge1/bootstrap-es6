@@ -6,6 +6,7 @@ class XCarousel extends XObject {
         super(config);
         this.width = this.config.width || 'auto';
         this.height = this.config.height || 'auto';
+        this.controls = this.config.controls || true;
         this.children = this.config.children || [];
 
         this.el = {};
@@ -26,6 +27,15 @@ class XCarousel extends XObject {
                 obj.render.call(obj);
             }
         });
+
+        if (this.controls) {
+            this.el.prev = document.createElement('a');
+            this.el.prev.className = 'carousel-control-prev';
+            this.el.prev.href = '#';
+            this.el.prev.role = 'button';
+            this.el.prev.setAttribute('data-slide', 'prev');
+
+        }
     }
 
 }
