@@ -90,6 +90,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="source\Component\XListGroupItem.js" />
     <Content Include="source\Component\XCardLink.js" />
     <Content Include="source\Component\XBreadcrumb.js" />
     <Content Include="source\Component\XAlert.js" />
@@ -128,6 +129,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\22-XListGroupTest.html" />
     <Content Include="test\21-XCardTest.html" />
     <Content Include="test\20-XButtonGroupTest.html" />
     <Content Include="test\19-XBreadcrumbTest.html" />

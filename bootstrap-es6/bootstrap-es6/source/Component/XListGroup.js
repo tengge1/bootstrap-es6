@@ -10,13 +10,13 @@ class XListGroup extends XObject {
     }
 
     render() {
-        this.el.ul = document.createElement('ul');
-        this.el.ul.className = 'list-group list-group-flush';
-        this.container.appendChild(this.el.ul);
+        this.el.group = document.createElement('ul');
+        this.el.group.className = 'list-group';
+        this.container.appendChild(this.el.group);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);
-            obj.container = this.el.ul;
+            obj.container = this.el.group;
             if (typeof (obj.render) == 'function') {
                 obj.render.call(obj);
             }

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>22-XListGroupTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'listgroup',
+                children: [{
+                    xtype: 'listgroupitem',
+                    html: 'Cras justo odio'
+                }, {
+                    xtype: 'listgroupitem',
+                    html: 'Dapibus ac facilisis in'
+                }, {
+                    xtype: 'listgroupitem',
+                    html: 'Morbi leo risus'
+                }, {
+                    xtype: 'listgroupitem',
+                    html: 'Porta ac consectetur ac'
+                }, {
+                    xtype: 'listgroupitem',
+                    html: 'Vestibulum at eros'
+                }]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

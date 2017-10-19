@@ -1236,3 +1236,54 @@ class XCardLink extends XObject {
 
 XType.add('cardlink', XCardLink);
 
+// XListGroup.js
+
+class XListGroup extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.group = document.createElement('ul');
+        this.el.group.className = 'list-group';
+        this.container.appendChild(this.el.group);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.group;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XType.add('listgroup', XListGroup);
+
+// XListGroupItem.js
+
+class XListGroupItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.item = document.createElement('li');
+        this.el.item.className = 'list-group-item';
+        this.el.item.innerHTML = this.html;
+        this.container.appendChild(this.el.item);
+    }
+
+}
+
+XType.add('listgroupitem', XListGroupItem);
+
