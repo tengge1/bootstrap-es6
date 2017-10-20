@@ -98,6 +98,7 @@
     <Content Include="source\Component\XCarousel.js" />
     <Content Include="source\Component\XCarouselInner.js" />
     <Content Include="source\Component\XCarouselItem.js" />
+    <Content Include="source\Component\XCollapse.js" />
     <Content Include="source\Component\XListGroupItem.js" />
     <Content Include="source\Component\XCardLink.js" />
     <Content Include="source\Component\XBreadcrumb.js" />
@@ -137,6 +138,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\24-XCollapseTest.html" />
     <Content Include="test\23-XCarouselTest.html" />
     <Content Include="test\22-XListGroupTest.html" />
     <Content Include="test\21-XCardTest.html" />

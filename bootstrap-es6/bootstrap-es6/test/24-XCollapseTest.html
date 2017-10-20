@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>24-XCollapseTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var col1 = new XCol({
+            children: [{
+                xtype: 'button',
+                text: 'Button1',
+                toggle: 'collapse',
+                target: '#collapse1'
+            }, {
+                xtype: 'collapse',
+                id: 'collapse1',
+                children: [{
+                    xtype: 'card',
+                    children: [{
+                        xtype: 'cardbody',
+                        children: [{
+                            xtype: 'html',
+                            html: 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.'
+                        }]
+                    }]
+                }]
+            }]
+        });
+
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'row',
+                children: [
+                    col1
+                ]
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

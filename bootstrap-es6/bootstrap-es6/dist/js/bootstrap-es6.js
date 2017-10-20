@@ -978,7 +978,9 @@ class XButton extends XObject {
         super(config);
         this.text = this.config.text || 'Button';
         this.cls = this.config.cls || 'btn-primary';
-        this.style = this.config.style || '';
+        this.style = this.config.style || null;
+        this.toggle = this.config.toggle || null;
+        this.target = this.config.target || null;
         this.listeners = this.config.listeners || null;
 
         this.el = {};
@@ -989,7 +991,15 @@ class XButton extends XObject {
         this.el.button.type = 'button';
         this.el.button.innerHTML = this.text;
         this.el.button.className = 'btn ' + this.cls;
-        this.el.button.style = this.style;
+        if (this.style) {
+            this.el.button.style = this.style;
+        }
+        if (this.toggle) {
+            this.el.button.setAttribute('data-toggle', this.toggle);
+        }
+        if (this.target) {
+            this.el.button.setAttribute('data-target', this.target);
+        }
         this.container.appendChild(this.el.button);
         new XEvent(this.el.button, this.listeners);
     }
@@ -1007,6 +1017,8 @@ class XLinkButton extends XObject {
         this.text = this.config.text || 'Button';
         this.cls = this.config.cls || 'btn-primary';
         this.url = this.config.url || '#';
+        this.toggle = this.config.toggle || null;
+        this.target = this.config.target || null;
         this.listeners = this.config.listeners || null;
 
         this.el = {};
@@ -1018,6 +1030,12 @@ class XLinkButton extends XObject {
         this.el.a.innerHTML = this.text;
         this.el.a.className = 'btn ' + this.cls;
         this.el.a.href = this.url;
+        if (this.toggle) {
+            this.el.a.setAttribute('data-toggle', this.toggle);
+        }
+        if (this.target) {
+            this.el.a.setAttribute('data-target', this.target);
+        }
         this.container.appendChild(this.el.a);
         new XEvent(this.el.a, this.listeners);
     }
@@ -1494,4 +1512,38 @@ class XListGroupItem extends XObject {
 }
 
 XType.add('listgroupitem', XListGroupItem);
+
+// XCollapse.js
+
+class XCollapse extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.id = this.config.id || 'XCollapse' + XCollapse.index;
+        this.children = this.config.children || [];
+
+        this.el = {};
+        XCollapse.index++;
+    }
+
+    render() {
+        this.el.collapse = document.createElement('div');
+        this.el.collapse.className = 'collapse';
+        this.el.collapse.id = this.id;
+        this.container.appendChild(this.el.collapse);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.collapse;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XCollapse.index = 0;
+
+XType.add('collapse', XCollapse);
 

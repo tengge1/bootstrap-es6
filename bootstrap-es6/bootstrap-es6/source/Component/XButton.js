@@ -6,7 +6,9 @@ class XButton extends XObject {
         super(config);
         this.text = this.config.text || 'Button';
         this.cls = this.config.cls || 'btn-primary';
-        this.style = this.config.style || '';
+        this.style = this.config.style || null;
+        this.toggle = this.config.toggle || null;
+        this.target = this.config.target || null;
         this.listeners = this.config.listeners || null;
 
         this.el = {};
@@ -17,7 +19,15 @@ class XButton extends XObject {
         this.el.button.type = 'button';
         this.el.button.innerHTML = this.text;
         this.el.button.className = 'btn ' + this.cls;
-        this.el.button.style = this.style;
+        if (this.style) {
+            this.el.button.style = this.style;
+        }
+        if (this.toggle) {
+            this.el.button.setAttribute('data-toggle', this.toggle);
+        }
+        if (this.target) {
+            this.el.button.setAttribute('data-target', this.target);
+        }
         this.container.appendChild(this.el.button);
         new XEvent(this.el.button, this.listeners);
     }
