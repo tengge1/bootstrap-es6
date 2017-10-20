@@ -93,6 +93,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="source\Component\XAccordion.js" />
     <Content Include="source\Component\XCardFooter.js" />
     <Content Include="source\Component\XCardHeader.js" />
     <Content Include="source\Component\XCarousel.js" />
