@@ -17,12 +17,14 @@
             container: document.body,
             children: [{
                 xtype: 'carousel',
-                width: '300px',
+                width: '500px',
                 children: [{
                     xtype: 'carouselinner',
                     children: [{
                         xtype: 'carouselitem',
                         active: true,
+                        title: 'First slide label',
+                        html: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
                         children: [{
                             xtype: 'image',
                             src: '../image/cat1.jpg',
@@ -31,6 +33,8 @@
                         }]
                     }, {
                         xtype: 'carouselitem',
+                        title: 'Second slide label',
+                        html: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                         children: [{
                             xtype: 'image',
                             src: '../image/cat2.jpg',
@@ -39,6 +43,8 @@
                         }]
                     }, {
                         xtype: 'carouselitem',
+                        title: 'Third slide label',
+                        html: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur.',
                         children: [{
                             xtype: 'image',
                             src: '../image/eagle.jpg',
@@ -47,6 +53,8 @@
                         }]
                     }, {
                         xtype: 'carouselitem',
+                        title: 'Fourth slide label',
+                        html: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                         children: [{
                             xtype: 'image',
                             src: '../image/wolf.jpg',
