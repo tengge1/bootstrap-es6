@@ -17,16 +17,11 @@ class XAccordion extends XObject {
         this.el.accordion.role = 'tablist';
         this.container.appendChild(this.el.accordion);
 
-        this.el.card = document.createElement('div');
-        this.el.card.className = 'card-header';
-        this.el.card.role = 'tab';
-        this.el.accordion.appendChild(this.el.card);
-
         this.el.items = [];
 
         this.children.forEach((n, i) => {
             this.el.items[i] = X.create(n);
-            this.el.items[i].container = this.el.card;
+            this.el.items[i].container = this.el.accordion;
             if (typeof (this.el.items[i].render) == 'function') {
                 this.el.items[i].render.call(this.el.items[i]);
             }

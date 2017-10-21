@@ -140,6 +140,7 @@
     <Content Include="source\XChild.js" />
     <Content Include="source\XEvent.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\25-XAccordionTest.html" />
     <Content Include="test\24-XCollapseTest.html" />
     <Content Include="test\23-XCarouselTest.html" />
     <Content Include="test\22-XListGroupTest.html" />

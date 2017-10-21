@@ -1034,7 +1034,8 @@ class XLinkButton extends XObject {
             this.el.a.setAttribute('data-toggle', this.toggle);
         }
         if (this.target) {
-            this.el.a.setAttribute('data-target', this.target);
+            this.url = this.target;
+            this.el.a.href = this.url;
         }
         this.container.appendChild(this.el.a);
         new XEvent(this.el.a, this.listeners);
@@ -1546,4 +1547,104 @@ class XCollapse extends XObject {
 XCollapse.index = 0;
 
 XType.add('collapse', XCollapse);
+
+// XAccordion.js
+
+class XAccordion extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.id = this.config.id || `XAccordion${XAccordion.index}`;
+        this.children = this.config.children || [];
+
+        this.el = {};
+        XAccordion.index++;
+    }
+
+    render() {
+        this.el.accordion = document.createElement('div');
+        this.el.accordion.id = this.id;
+        this.el.accordion.role = 'tablist';
+        this.container.appendChild(this.el.accordion);
+
+        this.el.items = [];
+
+        this.children.forEach((n, i) => {
+            this.el.items[i] = X.create(n);
+            this.el.items[i].container = this.el.accordion;
+            if (typeof (this.el.items[i].render) == 'function') {
+                this.el.items[i].render.call(this.el.items[i]);
+            }
+        });
+    }
+
+}
+
+XAccordion.index = 0;
+
+XType.add('accordion', XAccordion);
+
+// XAccordionItem.js
+
+class XAccordionItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.id = this.config.id || `XAccordionItem${XAccordionItem.index}`;
+        this.title = this.config.title || 'title';
+        this.active = this.config.active || false;
+        this.children = this.config.children || [];
+
+        this.el = {};
+        XAccordionItem.index++;
+    }
+
+    render() {
+        this.el.card = document.createElement('div');
+        this.el.card.className = 'card';
+        this.container.appendChild(this.el.card);
+
+        this.el.header = document.createElement('div');
+        this.el.header.className = 'card-header';
+        this.el.header.role = 'tab';
+        this.el.card.appendChild(this.el.header);
+
+        this.el.h5 = document.createElement('h5');
+        this.el.h5.className = 'mb-0';
+        this.el.header.appendChild(this.el.h5);
+
+        this.el.a = document.createElement('a');
+        this.el.a.setAttribute('data-toggle', 'collapse');
+        this.el.a.href = `#${this.id}`;
+        this.el.a.innerHTML = this.title;
+        this.el.h5.appendChild(this.el.a);
+
+        this.el.collapse = document.createElement('div');
+        this.el.collapse.id = this.id;
+        this.el.collapse.className = 'collapse';
+        if (this.active) {
+            this.el.collapse.className += ' show';
+        }
+        this.el.collapse.role = 'tabpanel';
+        this.el.collapse.setAttribute('data-parent', '#' + this.container.id);
+        this.el.card.appendChild(this.el.collapse);
+
+        this.el.body = document.createElement('div');
+        this.el.body.className = 'card-body';
+        this.el.collapse.appendChild(this.el.body);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.body;
+            if (typeof (obj.render) == 'function') {
+                obj.render.call(obj);
+            }
+        });
+    }
+
+}
+
+XAccordionItem.index = 0;
+
+XType.add('accordionitem', XAccordionItem);
 

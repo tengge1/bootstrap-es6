@@ -50,7 +50,9 @@
       "source/Component/XCarouselItem.js",
       "source/Component/XListGroup.js",
       "source/Component/XListGroupItem.js",
-      "source/Component/XCollapse.js"
+      "source/Component/XCollapse.js",
+      "source/Component/XAccordion.js",
+      "source/Component/XAccordionItem.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
