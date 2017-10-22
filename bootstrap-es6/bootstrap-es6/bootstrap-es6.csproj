@@ -125,6 +125,8 @@
     <Content Include="source\Component\XCardImage.js" />
     <Content Include="source\Component\XCardText.js" />
     <Content Include="source\Component\XCardTitle.js" />
+    <Content Include="source\Component\XOption.js" />
+    <Content Include="source\Component\XSelect.js" />
     <Content Include="source\Component\XTabPanel.js" />
     <Content Include="source\Component\XTabPanelItem.js" />
     <Content Include="source\Content\XCode.js" />

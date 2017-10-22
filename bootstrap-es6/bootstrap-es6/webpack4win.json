@@ -61,7 +61,9 @@
       "source/Component/XLabel.js",
       "source/Component/XInput.js",
       "source/Component/XFormText.js",
-      "source/Component/XFormCheck.js"
+      "source/Component/XFormCheck.js",
+      "source/Component/XSelect.js",
+      "source/Component/XOption.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
