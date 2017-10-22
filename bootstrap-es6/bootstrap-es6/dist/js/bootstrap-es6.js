@@ -1971,3 +1971,86 @@ class XOption extends XObject {
 
 XType.add('option', XOption);
 
+// XTextarea.js
+
+class XTextarea extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || '';
+    }
+
+    render() {
+        this.el.textarea = document.createElement('textarea');
+        this.el.textarea.className = 'form-control';
+        this.el.textarea.innerHTML = this.html;
+        this.container.appendChild(this.el.textarea);
+    }
+
+}
+
+XType.add('textarea', XTextarea);
+
+// XFile.js
+
+class XFile extends XObject {
+
+    constructor(config) {
+        super(config);
+    }
+
+    render() {
+        this.el.input = document.createElement('input');
+        this.el.input.type = 'file';
+        this.el.input.className = 'form-control-file';
+        this.container.appendChild(this.el.input);
+    }
+
+}
+
+XType.add('file', XFile);
+
+// XInput.js
+
+class XInput extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.type = this.config.type || 'text';
+        this.placeholder = this.config.placeholder || null;
+    }
+
+    render() {
+        this.el.input = document.createElement('input');
+        this.el.input.type = this.type;
+        this.el.input.className = 'form-control';
+        if (this.placeholder) {
+            this.el.input.placeholder = this.placeholder;
+        }
+        this.container.appendChild(this.el.input);
+    }
+
+}
+
+XType.add('input', XInput);
+
+// XInputGroupAddon.js
+
+class XInputGroupAddon extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+    }
+
+    render() {
+        this.el.span = document.createElement('span');
+        this.el.span.className = 'input-group-addon';
+        this.el.span.innerHTML = this.html;
+        this.container.appendChild(this.el.span);
+    }
+
+}
+
+XType.add('inputgroupaddon', XInputGroupAddon);
+

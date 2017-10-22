@@ -103,11 +103,14 @@
     <Content Include="source\Component\XCollapse.js" />
     <Content Include="source\Component\XDropdown.js" />
     <Content Include="source\Component\XDropdownItem.js" />
+    <Content Include="source\Component\XFile.js" />
     <Content Include="source\Component\XForm.js" />
     <Content Include="source\Component\XFormCheck.js" />
     <Content Include="source\Component\XFormGroup.js" />
     <Content Include="source\Component\XFormText.js" />
     <Content Include="source\Component\XInput.js" />
+    <Content Include="source\Component\XInputGroup.js" />
+    <Content Include="source\Component\XInputGroupAddon.js" />
     <Content Include="source\Component\XLabel.js" />
     <Content Include="source\Component\XListGroupItem.js" />
     <Content Include="source\Component\XCardLink.js" />
@@ -129,6 +132,7 @@
     <Content Include="source\Component\XSelect.js" />
     <Content Include="source\Component\XTabPanel.js" />
     <Content Include="source\Component\XTabPanelItem.js" />
+    <Content Include="source\Component\XTextarea.js" />
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
