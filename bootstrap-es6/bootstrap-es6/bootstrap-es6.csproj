@@ -104,6 +104,10 @@
     <Content Include="source\Component\XDropdown.js" />
     <Content Include="source\Component\XDropdownItem.js" />
     <Content Include="source\Component\XForm.js" />
+    <Content Include="source\Component\XFormGroup.js" />
+    <Content Include="source\Component\XFormText.js" />
+    <Content Include="source\Component\XInput.js" />
+    <Content Include="source\Component\XLabel.js" />
     <Content Include="source\Component\XListGroupItem.js" />
     <Content Include="source\Component\XCardLink.js" />
     <Content Include="source\Component\XBreadcrumb.js" />
@@ -146,6 +150,7 @@
     <Content Include="source\XEvent.js" />
     <Content Include="source\XExample.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\27-XFormTest.html" />
     <Content Include="test\26-XDropdownTest.html" />
     <Content Include="test\25-XAccordionTest.html" />
     <Content Include="test\24-XCollapseTest.html" />

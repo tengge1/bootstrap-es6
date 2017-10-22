@@ -184,6 +184,8 @@ class XObject {
     constructor(config) {
         this.config = config || {};
         this.container = this.config.container || document.body;
+
+        this.el = {};
     }
 
     render() {
@@ -1009,6 +1011,7 @@ class XButton extends XObject {
     constructor(config) {
         super(config);
         this.text = this.config.text || 'Button';
+        this.type = this.config.type || 'button';
         this.cls = this.config.cls || 'btn-primary';
         this.style = this.config.style || null;
         this.toggle = this.config.toggle || null;
@@ -1020,7 +1023,7 @@ class XButton extends XObject {
 
     render() {
         this.el.button = document.createElement('button');
-        this.el.button.type = 'button';
+        this.el.button.type = this.type;
         this.el.button.innerHTML = this.text;
         this.el.button.className = 'btn ' + this.cls;
         if (this.style) {
@@ -1770,4 +1773,122 @@ class XDropdownItem extends XObject {
 }
 
 XType.add('dropdownitem', XDropdownItem);
+
+// XForm.js
+
+class XForm extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.form = document.createElement('form');
+        this.container.appendChild(this.el.form);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.form;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('form', XForm);
+
+// XFormGroup.js
+
+class XFormGroup extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.group = document.createElement('div');
+        this.el.group.className = 'form-group';
+        this.container.appendChild(this.el.group);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.group;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('formgroup', XFormGroup);
+
+// XLabel.js
+
+class XLabel extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text || 'text';
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.label = document.createElement('label');
+        this.el.label.innerHTML = this.text;
+        this.container.appendChild(this.el.label);
+    }
+
+}
+
+XType.add('label', XLabel);
+
+// XInput.js
+
+class XInput extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.type = this.config.type || 'text';
+        this.placeholder = this.config.placeholder || null;
+    }
+
+    render() {
+        this.el.input = document.createElement('input');
+        this.el.input.type = this.type;
+        this.el.input.className = 'form-control';
+        if (this.placeholder) {
+            this.el.input.placeholder = this.placeholder;
+        }
+        this.container.appendChild(this.el.input);
+    }
+
+}
+
+XType.add('input', XInput);
+
+// XFormText.js
+
+class XFormText extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text;
+    }
+
+    render() {
+        this.el.text = document.createElement('small');
+        this.el.text.className = 'form-text text-muted';
+        this.el.text.innerHTML = this.text;
+        this.container.appendChild(this.el.text);
+    }
+
+}
+
+XType.add('formtext', XFormText);
 

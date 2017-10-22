@@ -5,6 +5,7 @@ class XButton extends XObject {
     constructor(config) {
         super(config);
         this.text = this.config.text || 'Button';
+        this.type = this.config.type || 'button';
         this.cls = this.config.cls || 'btn-primary';
         this.style = this.config.style || null;
         this.toggle = this.config.toggle || null;
@@ -16,7 +17,7 @@ class XButton extends XObject {
 
     render() {
         this.el.button = document.createElement('button');
-        this.el.button.type = 'button';
+        this.el.button.type = this.type;
         this.el.button.innerHTML = this.text;
         this.el.button.className = 'btn ' + this.cls;
         if (this.style) {

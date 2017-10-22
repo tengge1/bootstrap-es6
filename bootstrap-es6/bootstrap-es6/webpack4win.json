@@ -55,7 +55,12 @@
       "source/Component/XAccordion.js",
       "source/Component/XAccordionItem.js",
       "source/Component/XDropdown.js",
-      "source/Component/XDropdownItem.js"
+      "source/Component/XDropdownItem.js",
+      "source/Component/XForm.js",
+      "source/Component/XFormGroup.js",
+      "source/Component/XLabel.js",
+      "source/Component/XInput.js",
+      "source/Component/XFormText.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
