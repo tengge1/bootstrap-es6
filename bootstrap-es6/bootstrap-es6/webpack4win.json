@@ -9,6 +9,7 @@
       "source/XObject.js",
       "source/XHtml.js",
       "source/XChild.js",
+      "source/XExample.js",
 
       "source/Layout/XContainer.js",
       "source/Layout/XContainerFluid.js",
@@ -52,7 +53,9 @@
       "source/Component/XListGroupItem.js",
       "source/Component/XCollapse.js",
       "source/Component/XAccordion.js",
-      "source/Component/XAccordionItem.js"
+      "source/Component/XAccordionItem.js",
+      "source/Component/XDropdown.js",
+      "source/Component/XDropdownItem.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

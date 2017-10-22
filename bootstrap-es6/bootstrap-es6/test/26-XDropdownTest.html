@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>26-XDropdownTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var dropdownitems = [{
+            xtype: 'dropdownitem',
+            text: 'Action',
+            listeners: {
+                onclick: function () {
+                    alert('您点击了Action。')
+                }
+            }
+        }, {
+            xtype: 'dropdownitem',
+            text: 'Another action'
+        }, {
+            xtype: 'dropdownitem',
+            text: 'Something else here'
+        }, {
+            xtype: 'dropdownitem',
+            divider: true
+        }, {
+            xtype: 'dropdownitem',
+            text: 'Separated link'
+        }];
+
+        var container = new XExample({
+            container: document.body,
+            children: [{
+                xtype: 'dropdown',
+                text: 'Primary',
+                btnCls: 'btn-primary',
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Secondary',
+                btnCls: 'btn-secondary',
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Success',
+                btnCls: 'btn-success',
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Info',
+                btnCls: 'btn-info',
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Warning',
+                btnCls: 'btn-warning',
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Danger',
+                btnCls: 'btn-danger',
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Primary',
+                btnCls: 'btn-primary',
+                split: true,
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Secondary',
+                btnCls: 'btn-secondary',
+                split: true,
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Success',
+                btnCls: 'btn-success',
+                split: true,
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Info',
+                btnCls: 'btn-info',
+                split: true,
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Warning',
+                btnCls: 'btn-warning',
+                split: true,
+                children: dropdownitems
+            }, {
+                xtype: 'dropdown',
+                text: 'Danger',
+                cls: 'dropup',
+                btnCls: 'btn-danger',
+                split: true,
+                children: dropdownitems
+            }]
+        });
+        container.render();
+    </script>
+</body>
+</html>

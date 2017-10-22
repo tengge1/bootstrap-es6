@@ -244,6 +244,38 @@ class XChild extends XObject {
 
 XType.add('child', XChild);
 
+// XExample.js
+
+class XExample extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.container = document.createElement('div');
+        this.el.container.className = 'container example';
+        this.container.appendChild(this.el.container);
+
+        this.el.style = document.createElement('style');
+        document.head.appendChild(this.el.style);
+
+        this.el.style.sheet.addRule('.example > *', 'margin: 0.25rem;');
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.container;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('example', XExample);
+
 // XContainer.js
 
 class XContainer extends XObject {
@@ -1647,4 +1679,95 @@ class XAccordionItem extends XObject {
 XAccordionItem.index = 0;
 
 XType.add('accordionitem', XAccordionItem);
+
+// XDropdown.js
+
+class XDropdown extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text || 'text';
+        this.cls = this.config.cls || '';
+        this.btnCls = this.config.btnCls || 'btn-primary';
+        this.split = this.config.split || false;
+        this.children = this.config.children || [];
+        this.listeners = this.config.listeners || null;
+
+        this.el = {};
+    }
+
+    render() {
+        this.el.dropdown = document.createElement('div');
+        this.el.dropdown.className = 'btn-group ' + this.cls;
+        this.container.appendChild(this.el.dropdown);
+
+        this.el.button = document.createElement('button');
+        this.el.button.type = 'button';
+        if (this.split) {
+            this.el.button.className = 'btn ' + this.btnCls;
+            if (this.listeners) {
+                new XEvent(this.el.button, this.listeners);
+            }
+        } else {
+            this.el.button.className = 'btn dropdown-toggle ' + this.btnCls;
+            this.el.button.setAttribute('data-toggle', 'dropdown');
+        }
+        this.el.button.innerHTML = this.text;
+        this.el.dropdown.appendChild(this.el.button);
+
+        if (this.split) {
+            this.el.splitBtn = document.createElement('button');
+            this.el.splitBtn.className = 'btn dropdown-toggle dropdown-toggle-split ' + this.btnCls;
+            this.el.splitBtn.setAttribute('data-toggle', 'dropdown');
+            this.el.dropdown.appendChild(this.el.splitBtn);
+        }
+
+        this.el.menu = document.createElement('div');
+        this.el.menu.className = 'dropdown-menu';
+        this.el.dropdown.appendChild(this.el.menu);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.menu;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('dropdown', XDropdown);
+
+// XDropdownItem.js
+
+class XDropdownItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.divider = this.config.divider || false;
+        this.text = this.config.text || 'text';
+        this.url = this.config.url || 'javascript:;';
+        this.listeners = this.config.listeners || null;
+
+        this.el = {};
+    }
+
+    render() {
+        if (this.divider) {
+            this.el.item = document.createElement('div');
+            this.el.item.className = 'dropdown-divider';
+        } else {
+            this.el.item = document.createElement('a');
+            this.el.item.className = 'dropdown-item';
+            this.el.item.href = this.url;
+            this.el.item.innerHTML = this.text;
+            if (this.listeners) {
+                new XEvent(this.el.item, this.listeners);
+            }
+        }
+        this.container.appendChild(this.el.item);
+    }
+
+}
+
+XType.add('dropdownitem', XDropdownItem);
 
