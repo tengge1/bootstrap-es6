@@ -104,6 +104,7 @@
     <Content Include="source\Component\XDropdown.js" />
     <Content Include="source\Component\XDropdownItem.js" />
     <Content Include="source\Component\XForm.js" />
+    <Content Include="source\Component\XFormCheck.js" />
     <Content Include="source\Component\XFormGroup.js" />
     <Content Include="source\Component\XFormText.js" />
     <Content Include="source\Component\XInput.js" />
