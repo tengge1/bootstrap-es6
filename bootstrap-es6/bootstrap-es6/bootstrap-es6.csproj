@@ -111,6 +111,7 @@
     <Content Include="source\Component\XInput.js" />
     <Content Include="source\Component\XInputGroup.js" />
     <Content Include="source\Component\XInputGroupAddon.js" />
+    <Content Include="source\Component\XJumbotron.js" />
     <Content Include="source\Component\XLabel.js" />
     <Content Include="source\Component\XListGroupItem.js" />
     <Content Include="source\Component\XCardLink.js" />
