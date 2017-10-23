@@ -2010,29 +2010,30 @@ class XFile extends XObject {
 
 XType.add('file', XFile);
 
-// XInput.js
+// XInputGroup.js
 
-class XInput extends XObject {
+class XInputGroup extends XObject {
 
     constructor(config) {
         super(config);
-        this.type = this.config.type || 'text';
-        this.placeholder = this.config.placeholder || null;
+        this.children = this.config.children || [];
     }
 
     render() {
-        this.el.input = document.createElement('input');
-        this.el.input.type = this.type;
-        this.el.input.className = 'form-control';
-        if (this.placeholder) {
-            this.el.input.placeholder = this.placeholder;
-        }
-        this.container.appendChild(this.el.input);
+        this.el.group = document.createElement('div');
+        this.el.group.className = 'input-group';
+        this.container.appendChild(this.el.group);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.group;
+            obj.render.call(obj);
+        });
     }
 
 }
 
-XType.add('input', XInput);
+XType.add('inputgroup', XInputGroup);
 
 // XInputGroupAddon.js
 

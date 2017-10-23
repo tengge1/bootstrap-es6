@@ -157,6 +157,7 @@
     <Content Include="source\XEvent.js" />
     <Content Include="source\XExample.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\28-XInputGroupTest.html" />
     <Content Include="test\27-XFormTest.html" />
     <Content Include="test\26-XDropdownTest.html" />
     <Content Include="test\25-XAccordionTest.html" />
