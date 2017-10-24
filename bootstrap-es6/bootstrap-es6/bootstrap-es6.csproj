@@ -144,6 +144,7 @@
     <Content Include="source\Content\XH3.js" />
     <Content Include="source\Content\XH2.js" />
     <Content Include="source\Content\XH1.js" />
+    <Content Include="source\Content\XHr.js" />
     <Content Include="source\Content\XImage.js" />
     <Content Include="source\Content\XList.js" />
     <Content Include="source\Content\XP.js" />
