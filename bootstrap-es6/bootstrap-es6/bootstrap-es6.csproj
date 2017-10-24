@@ -146,6 +146,7 @@
     <Content Include="source\Content\XH1.js" />
     <Content Include="source\Content\XImage.js" />
     <Content Include="source\Content\XList.js" />
+    <Content Include="source\Content\XP.js" />
     <Content Include="source\Content\XTable.js" />
     <Content Include="source\Content\XTBody.js" />
     <Content Include="source\Content\XTD.js" />
