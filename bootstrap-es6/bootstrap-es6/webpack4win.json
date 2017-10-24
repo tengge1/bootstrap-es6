@@ -29,6 +29,12 @@
       "source/Content/XTH.js",
       "source/Content/XTD.js",
       "source/Content/XFigure.js",
+      "source/Content/XH1.js",
+      "source/Content/XH2.js",
+      "source/Content/XH3.js",
+      "source/Content/XH4.js",
+      "source/Content/XH5.js",
+      "source/Content/XH6.js",
 
       "source/Component/XAlert.js",
       "source/Component/XBadge.js",

@@ -138,6 +138,12 @@
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
     <Content Include="source\Content\XFigure.js" />
+    <Content Include="source\Content\XH6.js" />
+    <Content Include="source\Content\XH5.js" />
+    <Content Include="source\Content\XH4.js" />
+    <Content Include="source\Content\XH3.js" />
+    <Content Include="source\Content\XH2.js" />
+    <Content Include="source\Content\XH1.js" />
     <Content Include="source\Content\XImage.js" />
     <Content Include="source\Content\XList.js" />
     <Content Include="source\Content\XTable.js" />
