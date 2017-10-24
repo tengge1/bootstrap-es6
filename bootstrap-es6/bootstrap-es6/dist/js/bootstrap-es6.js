@@ -848,6 +848,188 @@ class XFigure extends XObject {
 
 XType.add('figure', XFigure);
 
+// XH1.js
+
+class XH1 extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.h1 = document.createElement('h1');
+        this.el.h1.innerHTML = this.html;
+        if (this.cls) {
+            this.el.h1.className = this.cls;
+        }
+        this.container.appendChild(this.el.h1);
+    }
+
+}
+
+XType.add('h1', XH1);
+
+// XH2.js
+
+class XH2 extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.h2 = document.createElement('h2');
+        this.el.h2.innerHTML = this.html;
+        if (this.cls) {
+            this.el.h1.className = this.cls;
+        }
+        this.container.appendChild(this.el.h2);
+    }
+
+}
+
+XType.add('h2', XH2);
+
+// XH3.js
+
+class XH3 extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.h3 = document.createElement('h3');
+        this.el.h3.innerHTML = this.html;
+        if (this.cls) {
+            this.el.h1.className = this.cls;
+        }
+        this.container.appendChild(this.el.h3);
+    }
+
+}
+
+XType.add('h3', XH3);
+
+// XH4.js
+
+class XH4 extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.h4 = document.createElement('h4');
+        this.el.h4.innerHTML = this.html;
+        if (this.cls) {
+            this.el.h1.className = this.cls;
+        }
+        this.container.appendChild(this.el.h4);
+    }
+
+}
+
+XType.add('h4', XH4);
+
+// XH5.js
+
+class XH5 extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.h5 = document.createElement('h5');
+        this.el.h5.innerHTML = this.html;
+        if (this.cls) {
+            this.el.h1.className = this.cls;
+        }
+        this.container.appendChild(this.el.h5);
+    }
+
+}
+
+XType.add('h5', XH5);
+
+// XH6.js
+
+class XH6 extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.h6 = document.createElement('h6');
+        this.el.h6.innerHTML = this.html;
+        if (this.cls) {
+            this.el.h1.className = this.cls;
+        }
+        this.container.appendChild(this.el.h6);
+    }
+
+}
+
+XType.add('h6', XH6);
+
+// XP.js
+
+class XP extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.html = this.config.html || 'html';
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.p = document.createElement('p');
+        this.el.p.innerHTML = this.html;
+        if (this.cls) {
+            this.el.p.className = this.cls;
+        }
+        this.container.appendChild(this.el.p);
+    }
+
+}
+
+XType.add('p', XP);
+
+// XHr.js
+
+class XHr extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.cls = this.config.cls || null;
+    }
+
+    render() {
+        this.el.hr = document.createElement('hr');
+        if (this.cls) {
+            this.el.hr.className = this.cls;
+        }
+        this.container.appendChild(this.el.hr);
+    }
+
+}
+
+XType.add('hr', XHr);
+
 // XAlert.js
 
 class XAlert extends XObject {
@@ -2054,4 +2236,29 @@ class XInputGroupAddon extends XObject {
 }
 
 XType.add('inputgroupaddon', XInputGroupAddon);
+
+// XJumbotron.js
+
+class XJumbotron extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.jumbotron = document.createElement('div');
+        this.el.jumbotron.className = 'jumbotron';
+        this.container.appendChild(this.el.jumbotron);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.jumbotron;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('jumbotron', XJumbotron);
 

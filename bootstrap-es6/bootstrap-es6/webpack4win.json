@@ -35,6 +35,8 @@
       "source/Content/XH4.js",
       "source/Content/XH5.js",
       "source/Content/XH6.js",
+      "source/Content/XP.js",
+      "source/Content/XHr.js",
 
       "source/Component/XAlert.js",
       "source/Component/XBadge.js",

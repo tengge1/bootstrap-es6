@@ -3,6 +3,7 @@
 class XH3 extends XObject {
 
     constructor(config) {
+        super(config);
         this.html = this.config.html || 'html';
         this.cls = this.config.cls || null;
     }
