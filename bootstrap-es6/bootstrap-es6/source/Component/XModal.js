@@ -4,6 +4,7 @@ class XModal extends XObject {
 
     constructor(config) {
         super(config);
+        this.id = this.config.id || null;
         this.title = this.config.title || 'title';
         this.children = this.config.children || [];
         this.buttons = this.config.buttons || [];
@@ -14,6 +15,9 @@ class XModal extends XObject {
         this.el.modal.className = 'modal';
         this.el.modal.tabindex = '-1';
         this.el.modal.role = 'dialog';
+        if (this.id) {
+            this.el.modal.id = this.id;
+        }
         this.container.appendChild(this.el.modal);
 
         this.el.dialog = document.createElement('div');
@@ -31,13 +35,14 @@ class XModal extends XObject {
 
         this.el.title = document.createElement('h5');
         this.el.title.className = 'modal-title';
+        this.el.title.innerHTML = this.title;
         this.el.header.appendChild(this.el.title);
 
         this.el.closeBtn = document.createElement('button');
         this.el.closeBtn.type = 'button';
         this.el.closeBtn.className = 'close';
         this.el.closeBtn.setAttribute('data-dismiss', 'modal');
-        this.el.title.appendChild(this.el.closeBtn);
+        this.el.header.appendChild(this.el.closeBtn);
 
         this.el.closeIcon = document.createElement('span');
         this.el.closeIcon.innerHTML = '&times;';
@@ -62,6 +67,14 @@ class XModal extends XObject {
             obj.container = this.el.footer;
             obj.render.call(obj);
         });
+    }
+
+    show() {
+
+    }
+
+    hide() {
+
     }
 
 }

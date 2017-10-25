@@ -10,6 +10,7 @@ class XButton extends XObject {
         this.style = this.config.style || null;
         this.toggle = this.config.toggle || null;
         this.target = this.config.target || null;
+        this.dismiss = this.config.dismiss || null;
         this.listeners = this.config.listeners || null;
 
         this.el = {};
@@ -28,6 +29,9 @@ class XButton extends XObject {
         }
         if (this.target) {
             this.el.button.setAttribute('data-target', this.target);
+        }
+        if (this.dismiss) {
+            this.el.button.setAttribute('data-dismiss', this.dismiss);
         }
         this.container.appendChild(this.el.button);
         new XEvent(this.el.button, this.listeners);

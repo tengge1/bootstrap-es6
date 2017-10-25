@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>30-XModalTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'button',
+                text: 'Launch demo modal',
+                toggle: 'modal',
+                target: '#mywin'
+            }, {
+                xtype: 'modal',
+                id: 'mywin',
+                title: '模态框',
+                children: [{
+                    xtype: 'p',
+                    html: 'Modal body text goes here.'
+                }],
+                buttons: [{
+                    xtype: 'button',
+                    text: 'Close',
+                    cls: 'btn-secondary',
+                    dismiss: 'modal'
+                }, {
+                    xtype: 'button',
+                    text: 'Save changes'
+                }]
+            }]
+        });
+
+        container.render();
+    </script>
+</body>
+</html>
