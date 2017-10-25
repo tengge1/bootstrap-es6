@@ -2338,14 +2338,93 @@ class XModal extends XObject {
     }
 
     show() {
-
+        if (this.el.modal) {
+            $(this.el.modal).modal('show');
+        }
     }
 
     hide() {
-
+        if (this.el.modal) {
+            $(this.el.modal).modal('hide');
+        }
     }
 
 }
 
 XType.add('modal', XModal);
+
+// XNav.js
+
+class XNav extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.nav = document.createElement('nav');
+        this.el.nav.className = 'nav';
+        this.container.appendChild(this.el.nav);
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.nav;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('nav', XNav);
+
+// XNavItem.js
+
+class XNavItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.item = document.createElement('li');
+        this.el.item.className = 'nav-item';
+        this.container.appendChild(this.el.item);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.item;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('navitem', XNavItem);
+
+// XNavLink.js
+
+class XNavLink extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.cls = this.config.cls || null;
+        this.url = this.config.url || '#';
+        this.text = this.config.text || 'text';
+    }
+
+    render() {
+        this.el.link = document.createElement('a');
+        this.el.link.className = 'nav-link';
+        if (this.cls) {
+            this.el.link.className += ' ' + this.cls;
+        }
+        this.el.link.href = this.url;
+        this.el.link.innerHTML = this.text;
+        this.container.appendChild(this.el.link);
+    }
+
+}
+
+XType.add('navlink', XNavLink);
 

@@ -77,7 +77,10 @@
       "source/Component/XInputGroup.js",
       "source/Component/XInputGroupAddon.js",
       "source/Component/XJumbotron.js",
-      "source/Component/XModal.js"
+      "source/Component/XModal.js",
+      "source/Component/XNav.js",
+      "source/Component/XNavItem.js",
+      "source/Component/XNavLink.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

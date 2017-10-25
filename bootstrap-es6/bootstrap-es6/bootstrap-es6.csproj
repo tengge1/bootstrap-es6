@@ -130,6 +130,9 @@
     <Content Include="source\Component\XCardText.js" />
     <Content Include="source\Component\XCardTitle.js" />
     <Content Include="source\Component\XModal.js" />
+    <Content Include="source\Component\XNav.js" />
+    <Content Include="source\Component\XNavItem.js" />
+    <Content Include="source\Component\XNavLink.js" />
     <Content Include="source\Component\XOption.js" />
     <Content Include="source\Component\XSelect.js" />
     <Content Include="source\Component\XTabPanel.js" />
@@ -167,6 +170,7 @@
     <Content Include="source\XEvent.js" />
     <Content Include="source\XExample.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\31-XNavTest.html" />
     <Content Include="test\30-XModalTest.html" />
     <Content Include="test\29-XJumbotronTest.html" />
     <Content Include="test\28-XInputGroupTest.html" />
