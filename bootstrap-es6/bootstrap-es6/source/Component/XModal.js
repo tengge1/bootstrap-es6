@@ -70,11 +70,15 @@ class XModal extends XObject {
     }
 
     show() {
-
+        if (this.el.modal) {
+            $(this.el.modal).modal('show');
+        }
     }
 
     hide() {
-
+        if (this.el.modal) {
+            $(this.el.modal).modal('hide');
+        }
     }
 
 }
