@@ -80,7 +80,9 @@
       "source/Component/XModal.js",
       "source/Component/XNav.js",
       "source/Component/XNavItem.js",
-      "source/Component/XNavLink.js"
+      "source/Component/XNavLink.js",
+      "source/Component/XTabPanel.js",
+      "source/Component/XTabPanelItem.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
