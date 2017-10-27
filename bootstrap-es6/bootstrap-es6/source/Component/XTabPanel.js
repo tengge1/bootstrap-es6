@@ -4,12 +4,13 @@ class XTabPanel extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || 'nav-tabs';
         this.children = this.config.children || [];
     }
 
     render() {
         this.el.nav = document.createElement('ul');
-        this.el.nav.className = 'nav nav-tabs';
+        this.el.nav.className = 'nav ' + this.cls;
         this.el.nav.role = 'tablist';
         this.container.appendChild(this.el.nav);
 
