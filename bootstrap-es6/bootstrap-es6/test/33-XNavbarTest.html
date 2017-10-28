@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>33-XNavbarTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XContainer({
+            container: document.body,
+            children: [{
+                xtype: 'navbar',
+                cls: 'navbar-expand-lg navbar-light bg-light',
+                children: [{
+                    xtype: 'navbarbrand',
+                    text: 'Navbar',
+                    url: '#'
+                }, {
+                    xtype: 'navbartoggler',
+                    target: '#collapse1'
+                }, {
+                    xtype: 'navbarcollapse',
+                    id: 'collapse1',
+                    children: [{
+                        xtype: 'navbarnav',
+                        cls: 'mr-auto',
+                        children: [{
+                            xtype: 'navitem',
+                            active: true,
+                            children: [{
+                                xtype: 'navlink',
+                                text: 'Home',
+                                url: '#'
+                            }]
+                        }, {
+                            xtype: 'navitem',
+                            children: [{
+                                xtype: 'navlink',
+                                text: 'Link',
+                                url: '#'
+                            }]
+                        }, {
+                            xtype: 'navitem',
+                            cls: 'dropdown',
+                            children: [{
+                                xtype: 'navlink',
+                                cls: 'dropdown-toggle',
+                                url: '#',
+                                toggle: 'dropdown',
+                                text: 'Dropdown'
+                            }, {
+                                xtype: 'dropdownmenu',
+                                children: [{
+                                    xtype: 'dropdownitem',
+                                    text: 'Action',
+                                    url: '#'
+                                }, {
+                                    xtype: 'dropdownitem',
+                                    text: 'Another action',
+                                    url: '#'
+                                }, {
+                                    xtype: 'dropdownitem',
+                                    divider: true
+                                }, {
+                                    xtype: 'dropdownitem',
+                                    text: 'Something else here'
+                                }]
+                            }]
+                        }, {
+                            xtype: 'navitem',
+                            children: [{
+                                xtype: 'navlink',
+                                cls: 'disabled',
+                                text: 'Disabled',
+                                url: '#'
+                            }]
+                        }]
+                    }, {
+                        xtype: 'form',
+                        cls: 'form-inline my-2 my-lg-0',
+                        children: [{
+                            xtype: 'input',
+                            type: 'search',
+                            cls: 'mr-sm-2',
+                            placeholder: 'search'
+                        }, {
+                            xtype: 'button',
+                            type: 'submit',
+                            cls: 'btn-outline-success my-2 my-sm-0',
+                            text: 'Search'
+                        }]
+                    }]
+                }]
+            }]
+        });
+
+        container.render();
+    </script>
+</body>
+</html>

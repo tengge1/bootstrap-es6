@@ -1966,6 +1966,7 @@ class XForm extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || null;
         this.children = this.config.children || [];
 
         this.el = {};
@@ -1973,6 +1974,9 @@ class XForm extends XObject {
 
     render() {
         this.el.form = document.createElement('form');
+        if (this.cls) {
+            this.el.form.className = this.cls;
+        }
         this.container.appendChild(this.el.form);
 
         this.children.forEach((n, i) => {
@@ -2041,6 +2045,7 @@ class XInput extends XObject {
     constructor(config) {
         super(config);
         this.type = this.config.type || 'text';
+        this.cls = this.config.cls || null;
         this.placeholder = this.config.placeholder || null;
     }
 
@@ -2048,6 +2053,9 @@ class XInput extends XObject {
         this.el.input = document.createElement('input');
         this.el.input.type = this.type;
         this.el.input.className = 'form-control';
+        if (this.cls) {
+            this.el.input.className += ' ' + this.cls;
+        }
         if (this.placeholder) {
             this.el.input.placeholder = this.placeholder;
         }
@@ -2387,12 +2395,20 @@ class XNavItem extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || null;
+        this.active = this.config.active || false;
         this.children = this.config.children || [];
     }
 
     render() {
         this.el.item = document.createElement('li');
         this.el.item.className = 'nav-item';
+        if (this.cls) {
+            this.el.item.className += ' ' + this.cls;
+        }
+        if (this.active) {
+            this.el.item.className += ' active';
+        }
         this.container.appendChild(this.el.item);
 
         this.children.forEach((n, i) => {
@@ -2415,6 +2431,7 @@ class XNavLink extends XObject {
         this.cls = this.config.cls || null;
         this.url = this.config.url || '#';
         this.text = this.config.text || 'text';
+        this.toggle = this.config.toggle || '';
     }
 
     render() {
@@ -2423,8 +2440,12 @@ class XNavLink extends XObject {
         if (this.cls) {
             this.el.link.className += ' ' + this.cls;
         }
+        this.el.link.setAttribute('role', 'button');
         this.el.link.href = this.url;
         this.el.link.innerHTML = this.text;
+        if (this.toggle != '') {
+            this.el.link.setAttribute('data-toggle', this.toggle);
+        }
         this.container.appendChild(this.el.link);
     }
 
@@ -2438,12 +2459,13 @@ class XTabPanel extends XObject {
 
     constructor(config) {
         super(config);
+        this.cls = this.config.cls || 'nav-tabs';
         this.children = this.config.children || [];
     }
 
     render() {
         this.el.nav = document.createElement('ul');
-        this.el.nav.className = 'nav nav-tabs';
+        this.el.nav.className = 'nav ' + this.cls;
         this.el.nav.role = 'tablist';
         this.container.appendChild(this.el.nav);
 
@@ -2514,4 +2536,166 @@ class XTabPanelItem extends XObject {
 XTabPanelItem.index = 0;
 
 XType.add('tabpanelitem', XTabPanelItem);
+
+// XNavbar.js
+
+class XNavbar extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.cls = this.config.cls || null;
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.nav = document.createElement('nav');
+        this.el.nav.className = 'navbar';
+        if (this.cls) {
+            this.el.nav.className += ' ' + this.cls;
+        }
+        this.container.appendChild(this.el.nav);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.nav;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('navbar', XNavbar);
+
+// XNavbarBrand.js
+
+class XNavbarBrand extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text || 'text';
+        this.url = this.config.url || '#';
+    }
+
+    render() {
+        this.el.brand = document.createElement('a');
+        this.el.brand.className = 'navbar-brand';
+        this.el.brand.href = this.url;
+        this.el.brand.innerHTML = this.text;
+        this.container.appendChild(this.el.brand);
+    }
+
+}
+
+XType.add('navbarbrand', XNavbarBrand);
+
+// XNavbarToggler.js
+
+class XNavbarToggler extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.target = this.config.target || '#';
+    }
+
+    render() {
+        this.el.button = document.createElement('button');
+        this.el.button.className = 'navbar-toggler';
+        this.el.button.type = 'button';
+        this.el.button.setAttribute('data-toggle', 'collapse');
+        this.el.button.setAttribute('data-target', this.target);
+        this.container.appendChild(this.el.button);
+
+        this.el.icon = document.createElement('span');
+        this.el.icon.className = 'navbar-toggler-icon';
+        this.el.button.appendChild(this.el.icon);
+    }
+
+}
+
+XType.add('navbartoggler', XNavbarToggler);
+
+// XNavbarCollapse.js
+
+class XNavbarCollapse extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.id = this.config.id || `XNavbarCollapse${XNavbarCollapse.index}`;
+        this.children = this.config.children || [];
+
+        XNavbarCollapse.index++;
+    }
+
+    render() {
+        this.el.collapse = document.createElement('div');
+        this.el.collapse.className = 'collapse navbar-collapse';
+        this.el.collapse.id = this.id;
+        this.container.appendChild(this.el.collapse);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.collapse;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XNavbarCollapse.index = 0;
+
+XType.add('navbarcollapse', XNavbarCollapse);
+
+// XNavbarNav.js
+
+class XNavbarNav extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.cls = this.config.cls || null;
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.nav = document.createElement('ul');
+        this.el.nav.className = 'navbar-nav';
+        if (this.cls) {
+            this.el.nav.className += ' ' + this.cls;
+        }
+        this.container.appendChild(this.el.nav);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.nav;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('navbarnav', XNavbarNav);
+
+// XDropdownMenu.js
+
+class XDropdownMenu extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.menu = document.createElement('div');
+        this.el.menu.className = 'dropdown-menu';
+        this.container.appendChild(this.el.menu);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.menu;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('dropdownmenu', XDropdownMenu);
 

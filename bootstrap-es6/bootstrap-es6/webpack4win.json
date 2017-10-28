@@ -82,7 +82,13 @@
       "source/Component/XNavItem.js",
       "source/Component/XNavLink.js",
       "source/Component/XTabPanel.js",
-      "source/Component/XTabPanelItem.js"
+      "source/Component/XTabPanelItem.js",
+      "source/Component/XNavbar.js",
+      "source/Component/XNavbarBrand.js",
+      "source/Component/XNavbarToggler.js",
+      "source/Component/XNavbarCollapse.js",
+      "source/Component/XNavbarNav.js",
+      "source/Component/XDropdownMenu.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

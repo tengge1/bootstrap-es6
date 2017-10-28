@@ -104,6 +104,7 @@
     <Content Include="source\Component\XCollapse.js" />
     <Content Include="source\Component\XDropdown.js" />
     <Content Include="source\Component\XDropdownItem.js" />
+    <Content Include="source\Component\XDropdownMenu.js" />
     <Content Include="source\Component\XFile.js" />
     <Content Include="source\Component\XForm.js" />
     <Content Include="source\Component\XFormCheck.js" />
@@ -134,6 +135,10 @@
     <Content Include="source\Component\XNav.js" />
     <Content Include="source\Component\XNavbar.js" />
     <Content Include="source\Component\XNavbarBrand.js" />
+    <Content Include="source\Component\XNavbarCollapse.js" />
+    <Content Include="source\Component\XNavbarNav.js" />
+    <Content Include="source\Component\XNavbarNavItem.js" />
+    <Content Include="source\Component\XNavbarToggler.js" />
     <Content Include="source\Component\XNavItem.js" />
     <Content Include="source\Component\XNavLink.js" />
     <Content Include="source\Component\XOption.js" />
@@ -173,7 +178,7 @@
     <Content Include="source\XEvent.js" />
     <Content Include="source\XExample.js" />
     <Content Include="source\XType.js" />
-    <Content Include="test\33-XNavbarBrandTest.html" />
+    <Content Include="test\33-XNavbarTest.html" />
     <Content Include="test\32-XTabPanelTest.html" />
     <Content Include="test\31-XNavTest.html" />
     <Content Include="test\30-XModalTest.html" />

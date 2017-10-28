@@ -1,6 +1,6 @@
-﻿// XNavItem.js
+﻿// XNavbarNavItem.js
 
-class XNavItem extends XObject {
+class XNavbarNavItem extends XObject {
 
     constructor(config) {
         super(config);
@@ -29,4 +29,4 @@ class XNavItem extends XObject {
 
 }
 
-XType.add('navitem', XNavItem);
+XType.add('navbarnavitem', XNavbarNavItem);

@@ -1,6 +1,6 @@
-﻿// XNavbar.js
+﻿// XNavbarNav.js
 
-class XNavbar extends XObject {
+class XNavbarNav extends XObject {
 
     constructor(config) {
         super(config);
@@ -9,8 +9,8 @@ class XNavbar extends XObject {
     }
 
     render() {
-        this.el.nav = document.createElement('nav');
-        this.el.nav.className = 'navbar';
+        this.el.nav = document.createElement('ul');
+        this.el.nav.className = 'navbar-nav';
         if (this.cls) {
             this.el.nav.className += ' ' + this.cls;
         }
@@ -25,4 +25,4 @@ class XNavbar extends XObject {
 
 }
 
-XType.add('navbar', XNavbar);
+XType.add('navbarnav', XNavbarNav);
