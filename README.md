@@ -8,6 +8,23 @@ jquery版本：3.2.1
 
 bootstrap版本：v4.0.0-beta
 
+## 类库
+
+|       类名         |       xtype       |
+|-------------------|-------------------|
+|   XBootstrap      |        无         |
+|   XType           |        无         |
+|   XCache          |        无         |
+|   XEvent          |        无         |
+|   X               |        无         |
+|   XObject         |     object        |
+|   XHtml           |     html          |
+|   XChild          |     child         |
+|   XExample        |     example       |
+|   XContainer      |     container     |
+|   XContainerFluid |    containerfluid |
+|
+
 ## 用法
 
 ```html
