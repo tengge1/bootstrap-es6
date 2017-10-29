@@ -1,11 +1,11 @@
-# bootstrap-es6
+# bootstrap-es6 v1.0.0
 
-使用ECMAScript6封装的Bootstrap框架。
+bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样通过javascript动态生成页面。这对于功能特别多、特别复杂的页面特别有用。
 
 ## 版本
 
 * jquery版本：3.2.1
-* bootstrap版本：v4.0.0-beta
+* bootstrap版本：4.0.0-beta
 * popper版本：1.12.5
 
 ## 类库
