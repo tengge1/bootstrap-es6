@@ -4,9 +4,9 @@
 
 ## 版本
 
-  jquery版本：3.2.1
-  bootstrap版本：v4.0.0-beta
-  popper版本：1.12.5
+* jquery版本：3.2.1
+* bootstrap版本：v4.0.0-beta
+* popper版本：1.12.5
 
 ## 类库
 
