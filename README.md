@@ -51,7 +51,8 @@ bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样�
 
 bootstrap-es6并不是通过拼接字符串的方式生成页面，而是通过两个函数`document.createElement`和  
 `[HTMLElement].appendChild`动态渲染页面。  
-当调用`XObject.render`函数时，它首先渲染最外层元素，然后最外层元素根据`children`属性列表中的`xtype`，创建相对应的类，来一层一层向内渲染。  
+当调用`XObject.render`函数时，它首先渲染最外层元素，然后最外层元素根据`children`属性列表中的  
+`xtype`，创建相对应的类，来一层一层向内渲染。  
 
 ## 核心函数简介
 
@@ -59,14 +60,14 @@ bootstrap-es6并不是通过拼接字符串的方式生成页面，而是通过�
 
 XType.add(xtype, cls)：可以将xtype和class的对应关系添加进来，这样就可以在children列表中使用了。  
 XType.get(config)：通过属性配置动态生成一个类的实例，config中必须包含xtype属性。  
-XType.remove(xtype)：将某个xtype从XType类中移除。
+XType.remove(xtype)：将某个xtype从XType类中移除。  
 
-`XCache`：用于管理id和实例对应关系的类。
+`XCache`：用于管理id和实例对应关系的类。  
 
 XCache.add(id, instance)：将id和实例对应关系保存。  
 XCache.get(id)：通过id获取实例，不存在则返回null。  
 
-`XEvent`：用于给控件添加事件的类。
+`XEvent`：用于给控件添加事件的类。  
 
 constructor(target, listener, scope)：给target元素添加一些监听事件，scope为事件中的命名空间。  
 enable()：启用所有事件监听。  
@@ -74,15 +75,15 @@ disable()：停用所有事件监听。  
 add(eventName, callback, scope)：为target添加一个事件。  
 remove(eventName, callback)：为target元素移除一个事件。  
 
-`X`：为方便使用创建的帮助类。
+`X`：为方便使用创建的帮助类。  
 
 X.create(config)：通过xtype配置动态生成一个实例。  
-X.get(id)：通过id获取实例。
+X.get(id)：通过id获取实例。  
 
-`XObject`：所有控件的基类。
+`XObject`：所有控件的基类。  
 
 constructor(config)：通过配置生成类的实例。  
-render()：将该控件及其子控件渲染到config.container容器中。
+render()：将该控件及其子控件渲染到config.container容器中。  
 
 ## 示例
 
