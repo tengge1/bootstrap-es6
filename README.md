@@ -49,7 +49,8 @@ bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样�
 
 ## 原理
 
-bootstrap-es6并不是通过拼接字符串的方式生成页面，而是通过两个函数`document.createElement`和`[HTMLElement].appendChild`动态渲染页面。  
+bootstrap-es6并不是通过拼接字符串的方式生成页面，而是通过两个函数`document.createElement`和  
+`[HTMLElement].appendChild`动态渲染页面。  
 当调用`XObject.render`函数时，它首先渲染最外层元素，然后最外层元素根据`children`属性列表中的`xtype`，创建相对应的类，来一层一层向内渲染。  
 
 ## 核心函数简介
