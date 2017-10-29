@@ -1,4 +1,4 @@
-# bootstrap-es6 v1.0.0
+# bootstrap-es6 1.0.0
 
 bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样通过javascript动态生成页面。这对于功能特别多、特别复杂的页面特别有用。
 
@@ -158,6 +158,8 @@ container.render();
 ```
 
 页面截图：
+
+[example1](https://github.com/tengge1/bootstrap-es6/blob/master/image/example1.png)
 
 ## 网站
 
