@@ -159,7 +159,7 @@ container.render();
 
 页面截图：
 
-[example1](https://github.com/tengge1/bootstrap-es6/blob/master/image/example1.png)
+![image](https://github.com/tengge1/bootstrap-es6/blob/master/image/example1.png)
 
 ## 网站
 
