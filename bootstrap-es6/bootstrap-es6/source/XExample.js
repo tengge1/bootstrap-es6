@@ -4,6 +4,7 @@ class XExample extends XObject {
 
     constructor(config) {
         super(config);
+        this.margin = this.config.margin || '0.25rem';
         this.children = this.config.children || [];
 
         this.el = {};
@@ -17,7 +18,7 @@ class XExample extends XObject {
         this.el.style = document.createElement('style');
         document.head.appendChild(this.el.style);
 
-        this.el.style.sheet.addRule('.example > *', 'margin: 0.25rem;');
+        this.el.style.sheet.addRule('.example > *', `margin: ${this.margin};`);
 
         this.children.forEach((n, i) => {
             var obj = X.create(n);

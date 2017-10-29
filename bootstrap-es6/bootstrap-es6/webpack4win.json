@@ -90,7 +90,8 @@
       "source/Component/XNavbarNav.js",
       "source/Component/XDropdownMenu.js",
       "source/Component/XPagination.js",
-      "source/Component/XPageItem.js"
+      "source/Component/XPageItem.js",
+      "source/Component/XPopOver.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"
