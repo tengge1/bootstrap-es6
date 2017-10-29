@@ -52,7 +52,7 @@ bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样�
 * bootstrap-es6并不是通过拼接字符串的方式生成页面，而是通过两个函数`document.createElement`和`[HTMLElement].appendChild`来动态渲染页面。
 * 当调用`XObject.render`函数时，它首先渲染最外层元素，然后最外层元素根据`children`属性列表中的`xtype`，创建相对应的类，来一层一层向内渲染。
 
-## 核心函数简介
+## 核心函数
 
 `XType`：用于管理class和xtype对应关系的类。
 
@@ -85,35 +85,79 @@ render()：将该控件及其子控件渲染到config.container容器中。
 
 ## 示例
 
-```html
-<!DOCTYPE html>
+javascript代码：
 
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>bootstrap-es6 hello world</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-</head>
-<body>
-    <script src="../dist/js/jquery.js"></script>
-    <script src="../dist/js/popper.js"></script>
-    <script src="../dist/js/bootstrap.js"></script>
-    <script src="../dist/js/bootstrap-es6.js"></script>
-    <script>
-        var container = new XContainer({
-            container: document.body,
+```javascript
+var container = new XContainer({
+    container: document.body,
+    children: [{
+        xtype: 'form',
+        children: [{
+            xtype: 'formgroup',
             children: [{
-                xtype: 'html',
-                html: 'Hello, world!'
+                xtype: 'label',
+                text: 'Email address'
+            }, {
+                xtype: 'input',
+                type: 'email',
+                placeholder: 'Enter email'
+            }, {
+                xtype: 'formtext',
+                text: 'We\'ll never share your email with anyone else.'
             }]
-        });
-        container.render();
-    </script>
-</body>
-</html>
+        }, {
+            xtype: 'formgroup',
+            children: [{
+                xtype: 'label',
+                text: 'Password'
+            }, {
+                xtype: 'input',
+                type: 'password',
+                placeholder: 'Password'
+            }]
+        }, {
+            xtype: 'formgroup',
+            children: [{
+                xtype: 'label',
+                text: 'Example select'
+            }, {
+                xtype: 'select',
+                children: [{
+                    xtype: 'option',
+                    text: '1'
+                }, {
+                    xtype: 'option',
+                    text: '2'
+                }, {
+                    xtype: 'option',
+                    text: '3'
+                }]
+            }]
+        }, {
+            xtype: 'formcheck',
+            text: 'Check me out'
+        }, {
+            xtype: 'formgroup',
+            children: [{
+                xtype: 'textarea',
+                html: 'test'
+            }]
+        }, {
+            xtype: 'formgroup',
+            children: [{
+                xtype: 'file'
+            }]
+        }, {
+            xtype: 'button',
+            type: 'submit',
+            text: 'Submit'
+        }]
+    }]
+});
+container.render();
 ```
+
+页面截图：
 
 ## 网站
 
