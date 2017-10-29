@@ -142,6 +142,8 @@
     <Content Include="source\Component\XNavItem.js" />
     <Content Include="source\Component\XNavLink.js" />
     <Content Include="source\Component\XOption.js" />
+    <Content Include="source\Component\XPageItem.js" />
+    <Content Include="source\Component\XPagination.js" />
     <Content Include="source\Component\XSelect.js" />
     <Content Include="source\Component\XTabPanel.js" />
     <Content Include="source\Component\XTabPanelItem.js" />
@@ -178,6 +180,7 @@
     <Content Include="source\XEvent.js" />
     <Content Include="source\XExample.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\34-XPaginationTest.html" />
     <Content Include="test\33-XNavbarTest.html" />
     <Content Include="test\32-XTabPanelTest.html" />
     <Content Include="test\31-XNavTest.html" />

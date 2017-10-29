@@ -88,7 +88,9 @@
       "source/Component/XNavbarToggler.js",
       "source/Component/XNavbarCollapse.js",
       "source/Component/XNavbarNav.js",
-      "source/Component/XDropdownMenu.js"
+      "source/Component/XDropdownMenu.js",
+      "source/Component/XPagination.js",
+      "source/Component/XPageItem.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

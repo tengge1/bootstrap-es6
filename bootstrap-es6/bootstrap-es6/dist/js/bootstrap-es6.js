@@ -2699,3 +2699,61 @@ class XDropdownMenu extends XObject {
 
 XType.add('dropdownmenu', XDropdownMenu);
 
+// XPagination.js
+
+class XPagination extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.children = this.config.children || [];
+    }
+
+    render() {
+        this.el.nav = document.createElement('nav');
+        this.container.appendChild(this.el.nav);
+
+        this.el.pagination = document.createElement('ul');
+        this.el.pagination.className = 'pagination';
+        this.el.nav.appendChild(this.el.pagination);
+
+        this.children.forEach((n, i) => {
+            var obj = X.create(n);
+            obj.container = this.el.pagination;
+            obj.render.call(obj);
+        });
+    }
+
+}
+
+XType.add('pagination', XPagination);
+
+// XPageItem.js
+
+class XPageItem extends XObject {
+
+    constructor(config) {
+        super(config);
+        this.text = this.config.text || 'text';
+        this.url = this.config.url || '#';
+        this.active = this.config.active || false;
+    }
+
+    render() {
+        this.el.item = document.createElement('li');
+        this.el.item.className = 'page-item';
+        if (this.active) {
+            this.el.item.className += ' active';
+        }
+        this.container.appendChild(this.el.item);
+
+        this.el.link = document.createElement('a');
+        this.el.link.className = 'page-link';
+        this.el.link.href = this.url;
+        this.el.link.innerHTML = this.text;
+        this.el.item.appendChild(this.el.link);
+    }
+
+}
+
+XType.add('pageitem', XPageItem);
+
