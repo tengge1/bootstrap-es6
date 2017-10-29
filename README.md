@@ -206,6 +206,12 @@ container.render();
 
 ## 网站
 
+jquery API中文文档：http://jquery.cuishifeng.cn/
+
 Bootstrap中文网：http://www.bootcss.com/
 
+Bootstrap4文档国内镜像：https://v4.bootcss.com/docs/4.0/getting-started/introduction/
+
 ECMAScript6入门：http://es6.ruanyifeng.com/
+
+Popper.js：https://popper.js.org/
