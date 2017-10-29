@@ -92,7 +92,8 @@
       "source/Component/XPagination.js",
       "source/Component/XPageItem.js",
       "source/Component/XPopOver.js",
-      "source/Component/XProgress.js"
+      "source/Component/XProgress.js",
+      "source/Component/XTooltip.js"
     ],
     "dest": "dist/js",
     "fileName": "bootstrap-es6"

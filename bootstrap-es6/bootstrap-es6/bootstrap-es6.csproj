@@ -150,6 +150,7 @@
     <Content Include="source\Component\XTabPanel.js" />
     <Content Include="source\Component\XTabPanelItem.js" />
     <Content Include="source\Component\XTextarea.js" />
+    <Content Include="source\Component\XTooltip.js" />
     <Content Include="source\Content\XCode.js" />
     <Content Include="source\Content\XDefinitionItem.js" />
     <Content Include="source\Content\XDefinitionList.js" />
@@ -182,6 +183,7 @@
     <Content Include="source\XEvent.js" />
     <Content Include="source\XExample.js" />
     <Content Include="source\XType.js" />
+    <Content Include="test\37-XTooltipTest.html" />
     <Content Include="test\36-XProgressTest.html" />
     <Content Include="test\35-XPopOverTest.html" />
     <Content Include="test\34-XPaginationTest.html" />

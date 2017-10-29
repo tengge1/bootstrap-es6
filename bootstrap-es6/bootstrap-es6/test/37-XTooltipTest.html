@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>37-XTooltipTest</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/popper.js"></script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../dist/js/bootstrap-es6.js"></script>
+    <script>
+        var container = new XExample({
+            container: document.body,
+            margin: '30px',
+            children: [{
+                xtype: 'tooltip',
+                html: 'On the top',
+                direction: 'top',
+                position: 'relative'
+            }, {
+                xtype: 'tooltip',
+                html: 'On the left',
+                direction: 'left',
+                position: 'relative'
+            }, {
+                xtype: 'tooltip',
+                html: 'On the right',
+                direction: 'right',
+                position: 'relative'
+            }, {
+                xtype: 'tooltip',
+                html: 'On the bottom',
+                direction: 'bottom',
+                position: 'relative'
+            }]
+        });
+
+        container.render();
+    </script>
+</body>
+</html>
