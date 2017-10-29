@@ -1,6 +1,49 @@
 # bootstrap-es6 1.0.0
 
-bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样通过javascript动态生成页面。这对于功能特别多、特别复杂的页面特别有用。
+bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样通过javascript动态生成页面。这对于功能特别多、特别复杂的页面特别有用。它提供了多种通过javascript创建页面元素的方法。
+
+方法一：
+
+```javascript
+var container = new XContainer({
+    container: document.body,
+    children: [{
+        xtype: 'html',
+        html: 'Hello, world!'
+    }]
+});
+container.render();
+```
+
+方法二：
+
+```javascript
+var html = new XHtml({
+    html: 'Hello, world!'
+});
+
+var container = new XContainer({
+    container: document.body,
+    children: [html]
+});
+container.render();
+```
+
+方法三：
+
+```javascript
+var container = X.create({
+    xtype: 'container',
+    container: document.body,
+    children: [{
+        xtype: 'html',
+        html: 'Hello, world!'
+    }]
+});
+container.render();
+```
+
+这三种方法渲染出的页面是完全相同的。
 
 ## 版本
 
