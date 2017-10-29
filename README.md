@@ -1,4 +1,4 @@
-# bootstrap-es6 1.0.0
+# bootstrap-es6 v1.0.0
 
 bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样通过javascript动态生成页面。这对于功能特别多、特别复杂的页面特别有用。它提供了多种通过javascript渲染页面元素的方法。
 
@@ -203,6 +203,11 @@ container.render();
 页面截图：
 
 ![image](https://github.com/tengge1/bootstrap-es6/blob/master/image/example1.png)
+
+## 注意事项
+
+* bootstrap-es6 v1.0.0目前包含90个类，37个测试用例。但是，每个类提供的属性和方法太少太少，远远无法满足开发需要。建议下载源码，遇到缺少的属性和方法时自己添加进去，然后双击`webpack4win.exe`，就可以自动合并成一个js文件。
+* 目前，ie内核浏览器不支持ECMAScript6的一些语法，推荐使用谷歌浏览器。如果必须要兼容ie，可以使用工具将`bootstrap-es6.js`转换为ECMAScript5语法，即使用原型链的方式创建类和实现继承。
 
 ## 网站
 
