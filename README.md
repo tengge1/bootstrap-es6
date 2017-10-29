@@ -47,7 +47,20 @@ bootstrap-es6将bootstrap框架中的组件封装为类，可以像ExtJs那样�
 |   XP              |   p               |   XSelect            |   select           |                    |                       |
 |   XHr             |   hr              |   XOption            |   option           |                    |                       |
 
-## 基本原理
+## 原理
+
+bootstrap-es6并不是通过拼接字符串的方式生成页面，而是通过两个函数`document.createElement`和`[HTMLElement].appendChild`动态渲染页面。  
+当调用`XObject.render`函数时，它首先渲染最外层元素，然后最外层元素根据`children`属性列表中的`xtype`，创建相对应的类，来一层一层向内渲染。  
+
+## 重要类和函数
+
+`XType`：用于管理class和xtype对应关系的类。
+
+`XType.add('xtype', cls)`：可以将下xtype和class的对应关系添加进来，这样就可以在children列表中使用了。其中class必须是XObject的子类。  
+`XType.get(config)`：通过属性配置动态生成一个类的实例，config中必须包含xtype属性。  
+`XType.remove('xtype')`：将某个xtype从XType类中移除。
+
+
 
 ## 示例
 
